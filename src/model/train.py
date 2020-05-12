@@ -1,7 +1,10 @@
-
 import cv2
+import torch
 import numpy as np
-from src.config import cfg
+from config import cfg
+from data.data import train_val_test_split
+
+train_on_gpu = torch.cuda.is_available()
 
 
 def train_top_layer(model):
