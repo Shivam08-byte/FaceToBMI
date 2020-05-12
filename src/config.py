@@ -4,6 +4,7 @@ from os.path import join
 class Config:
     # Set up Path
     root = ".."
+    # Path for data
     data_path = join(root, "data")
     raw_data_path = join(data_path, "raw")
     intermediate_data_path = join(data_path + "interim")
@@ -13,6 +14,10 @@ class Config:
     male_annotation_name = join(intermediate_data_path, "male_annotation.csv")
     image_dir = join(data_path, "images")
     processed_path = join(data_path, "processed")
+
+    # Path for model
+    model_path = join(root, "models")
+    pretrained_model_path = join(model_path, "pretrained")
 
     # Setup variables
     batch_size = 16
