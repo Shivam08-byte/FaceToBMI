@@ -1,28 +1,27 @@
-import numpy as np
-import pandas as pd
-import sys
+from os.path import join
 
 
 class Config:
-    # Set up Variable
-    data_path = "../data/"
-    raw_data_path = data_path + "raw/"
-    intermediate_data_path = data_path + "interim/"
-    full_annotation_name = intermediate_data_path + "full_annotation.csv"
-    female_annotation_name = intermediate_data_path + "female_annotation.csv"
-    male_annotation_name = intermediate_data_path + "male_annotation.csv"
+    # Set up Path
+    root = ".."
+    data_path = join(root, "data")
+    raw_data_path = join(data_path, "raw")
+    intermediate_data_path = join(data_path + "interim")
+    full_annotation_name = join(intermediate_data_path, "full_annotation.csv")
+    female_annotation_name = join(
+        intermediate_data_path, "female_annotation.csv")
+    male_annotation_name = join(intermediate_data_path, "male_annotation.csv")
+    image_dir = join(data_path, "images")
+    processed_path = join(data_path, "processed")
+
+    # Setup variables
     batch_size = 16
-
-    image_dir = data_path+"images/"
-
-    processed_path = "../data/processed/"
-
     base_learning_rate = 1e-5
-    epochs = 1  # should be 500 change to 400000 if you are a rich kid!
+    epochs = 1  # should be 500 or higher
     weight_decay = 0.0005
     gamma = 0.001
     power = 0.75
-    num_of_tries = 1
+    num_of_tries = 1  # should be 10 or more
 
 
 cfg = Config()

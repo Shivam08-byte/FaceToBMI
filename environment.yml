@@ -226,6 +226,7 @@ dependencies:
     - contextlib2==0.6.0.post1
     - decord==0.3.5
     - distro==1.5.0
+    - dlib==19.19.0
     - docker==4.2.0
     - dotnetcore2==2.1.14
     - flake8==3.7.9
