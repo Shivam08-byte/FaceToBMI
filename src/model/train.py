@@ -4,6 +4,7 @@ from config import cfg
 from torch import nn, optim
 from data.data import train_val_test_split
 import matplotlib.pyplot as plt
+from os.path import join
 
 # train_on_gpu = torch.cuda.is_available()
 train_on_gpu = False  # For laptop
@@ -72,17 +73,25 @@ def train_model(train_loader, valid_loader, model):
             valid_loss = valid_loss/len(valid_loader.sampler)
             train_losses.append(train_loss)
             valid_losses.append(valid_loss)
-            print(
-                "Epoch: {}/{}..".format(epoch+1, cfg.epochs),
-                "Training loss: {:.3f}".format(train_loss),
-                "Validating loss: {:.3f}".format(valid_loss)
-            )
+            # print(
+            #     "Epoch: {}/{}..".format(epoch+1, cfg.epochs),
+            #     "Training loss: {:.3f}".format(train_loss),
+            #     "Validating loss: {:.3f}".format(valid_loss)
+            # )
             if valid_loss <= valid_loss_min:
                 print('Epoch: {}/{}.. Validation loss decreased ({:.6f} --> {:.6f}).  Saving model ...'.format(
                     epoch+1, cfg.epochs, valid_loss_min, valid_loss))
                 torch.save(model.state_dict(),
                            '../models/trained/best_model.pt')
                 valid_loss_min = valid_loss
+
+    fig = plt.figure(figsize=(25, cfg.epochs))
+    plt.plot(train_losses, label='Training loss')
+    plt.plot(valid_losses, label='Validation loss')
+    _ = plt.legend(frameon=False)
+    figure_path = join(cfg.visualization_path, "train_valid.png")
+    fig.savefig(figure_path)
+    plt.close(fig)
 
 
 def test_model(test_loader, model, plot_sample=True):
@@ -122,3 +131,6 @@ def test_model(test_loader, model, plot_sample=True):
                 "Predicted:{:.2f}/ Actual: {:.2f}".format(
                     predictions[idx, :].item(), bmi[idx, :].item()),
                 color=("green" if predictions[idx, :].item() == bmi[idx, :].item() else "red"))
+        figure_path = join(cfg.visualization_path, "test_sample.png")
+        fig.savefig(figure_path)
+        plt.close(fig)

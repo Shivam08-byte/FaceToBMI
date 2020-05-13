@@ -16,6 +16,7 @@ class Config:
     image_path = join(data_path, "images")
     processed_path = join(data_path, "processed")
     total_data_processed_file = join(processed_path, "total_dataset.pt")
+    visualization_path = join(getcwd(), "visualization")
 
     # Path for model
     model_path = join(root, "models")
