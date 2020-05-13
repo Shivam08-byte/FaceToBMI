@@ -26,7 +26,7 @@ class Config:
     # Setup variables
     batch_size = 16
     base_learning_rate = 1e-5
-    epochs = 10  # should be 500 or higher
+    epochs = 10 # should be 500 or higher
     weight_decay = 0.0005
     gamma = 0.001
     power = 0.75
