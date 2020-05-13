@@ -1,11 +1,10 @@
-from os.path import join
+from os.path import join, dirname
 from os import getcwd
 
 
 class Config:
     # Set up Path
-    src_path = getcwd()
-    root = join("..", src_path)
+    root = dirname(getcwd())
     # Path for data
     data_path = join(root, "data")
     raw_data_path = join(data_path, "raw")
@@ -26,7 +25,7 @@ class Config:
     # Setup variables
     batch_size = 16
     base_learning_rate = 1e-5
-    epochs = 1  # should be 500 or higher
+    epochs = 10  # should be 500 or higher
     weight_decay = 0.0005
     gamma = 0.001
     power = 0.75

@@ -1,19 +1,17 @@
-import cv2
 import torch
 import numpy as np
 from config import cfg
 from torch import nn, optim
 from data.data import train_val_test_split
-from model.model import get_model
+import matplotlib.pyplot as plt
 
-train_on_gpu = torch.cuda.is_available()
+# train_on_gpu = torch.cuda.is_available()
+train_on_gpu = False  # For laptop
 
 
 def get_criterion():
     # Setting criterion and loggin
     criterion = nn.SmoothL1Loss()
-    if train_on_gpu:
-        criterion.cuda()
     return criterion
 
 
@@ -26,24 +24,19 @@ def get_optimizer(epoch, model):
 
 def get_test_criterion():
     test_criterion = nn.L1Loss()
-    if train_on_gpu:
-        test_criterion = test_criterion.cuda()
     return test_criterion
 
 
-def train_model(train_loader, valid_loader):
-    print('Training top layer only')
-
-    model = get_model()
+def train_model(train_loader, valid_loader, model):
+    criterion = get_criterion()
 
     if train_on_gpu:
         model = model.cuda()
-
-    criterion = get_criterion()
+        criterion = criterion.cuda()
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
-
+    print("Training models...")
     for epoch in range(cfg.epochs):
         optimizer = get_optimizer(epoch, model)
         train_loss = 0.0
@@ -69,10 +62,8 @@ def train_model(train_loader, valid_loader):
             with torch.no_grad():
                 model.eval()
                 for images, _, _, bmi in valid_loader:
-                    # move tensors to GPU if CUDA is available
                     if train_on_gpu:
                         images, bmi = images.cuda(), bmi.cuda()
-                    # Run model
                     predictions = model(images)
                     loss = criterion(predictions, bmi)
                     valid_loss += loss.item()*images.size(0)
@@ -81,24 +72,30 @@ def train_model(train_loader, valid_loader):
             valid_loss = valid_loss/len(valid_loader.sampler)
             train_losses.append(train_loss)
             valid_losses.append(valid_loss)
-            # print(
-            #     "Epoch: {}/{}..".format(epoch+1, epochs),
-            #     "Training loss: {:.3f}".format(train_loss),
-            #     "Validating loss: {:.3f}".format(valid_loss)
-            # )
-            if valid_loss <= valid_loss_min:  # save model if validation loss has decreased
+            print(
+                "Epoch: {}/{}..".format(epoch+1, cfg.epochs),
+                "Training loss: {:.3f}".format(train_loss),
+                "Validating loss: {:.3f}".format(valid_loss)
+            )
+            if valid_loss <= valid_loss_min:
                 print('Epoch: {}/{}.. Validation loss decreased ({:.6f} --> {:.6f}).  Saving model ...'.format(
                     epoch+1, cfg.epochs, valid_loss_min, valid_loss))
                 torch.save(model.state_dict(),
-                           '../models/trained/best_model.pt')  # for testing
+                           '../models/trained/best_model.pt')
                 valid_loss_min = valid_loss
 
 
-def test_model(test_loader, plot_sample=False):
+def test_model(test_loader, model, plot_sample=True):
     model.load_state_dict(torch.load('../models/trained/best_model.pt'))
-    test_loss = 0.0
     test_criterion = get_test_criterion()
-    print("Testing...")
+
+    if train_on_gpu:
+        test_criterion = test_criterion.cuda()
+        model = model.cuda()
+
+    test_loss = 0.0
+
+    print("Testing model...")
     with torch.no_grad():
         model.eval()
         for images, _, _, bmi in test_loader:
@@ -110,22 +107,13 @@ def test_model(test_loader, plot_sample=False):
 
     # average test loss
     test_loss = test_loss/len(test_loader.sampler)
+    print(f"Testing loss: {test_loss:.3f}")
 
     if plot_sample:
-        model.load_state_dict(torch.load('../models/trained/best_model.pt'))
-
-        # obtain one batch of test images
         images, height, weight, bmi = next(iter(test_loader))
-
-        # get sample predictions
         predictions = model(images)
-
-        # prep images for display
         images = images.numpy()
-
-        # plot the images in the batch, along with predicted and true labels
         fig = plt.figure(figsize=(25, cfg.batch_size))
-
         for idx in np.arange(cfg.batch_size):
             ax = fig.add_subplot(4, cfg.batch_size/4,
                                  idx+1, xticks=[], yticks=[])

@@ -9,7 +9,7 @@ import os
 os.environ['TORCH_HOME'] = cfg.pretrained_model_path
 
 
-def get_model():
+def get_model(multiple_train=False):
     resnet50 = models.resnet50(pretrained=True)
     for param in resnet50.parameters():
         param.requires_grad = False
@@ -18,5 +18,6 @@ def get_model():
     ]))
     resnet50.fc = fc
     # Saving model for training multiple times
-    # torch.save(resnet50.state_dict(), cfg.init_model_path)
+    if multiple_train:
+        torch.save(resnet50.state_dict(), cfg.init_model_file)
     return resnet50
