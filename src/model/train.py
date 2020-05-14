@@ -2,7 +2,6 @@ import torch
 import numpy as np
 from config import cfg
 from torch import nn, optim
-from data.data import train_val_test_split
 import matplotlib.pyplot as plt
 from os.path import join
 
@@ -37,7 +36,7 @@ def train_model(train_loader, valid_loader, model):
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
-    print("Training models...")
+    print("\tTraining models...")
     for epoch in range(cfg.epochs):
         optimizer = get_optimizer(epoch, model)
         train_loss = 0.0
@@ -79,7 +78,7 @@ def train_model(train_loader, valid_loader, model):
             #     "Validating loss: {:.3f}".format(valid_loss)
             # )
             if valid_loss <= valid_loss_min:
-                print('Epoch: {}/{}.. Validation loss decreased ({:.6f} --> {:.6f}).  Saving model ...'.format(
+                print('\t\tEpoch: {}/{}.. Validation loss decreased ({:.6f} --> {:.6f}).  Saving model ...'.format(
                     epoch+1, cfg.epochs, valid_loss_min, valid_loss))
                 torch.save(model.state_dict(),
                            '../models/trained/best_model.pt')
@@ -104,7 +103,7 @@ def test_model(test_loader, model, plot_sample=True):
 
     test_loss = 0.0
 
-    print("Testing model...")
+    print("\tTesting model...")
     with torch.no_grad():
         model.eval()
         for images, _, _, bmi in test_loader:
@@ -116,7 +115,8 @@ def test_model(test_loader, model, plot_sample=True):
 
     # average test loss
     test_loss = test_loss/len(test_loader.sampler)
-    print(f"Testing loss: {test_loss:.3f}")
+    print(f"\tTesting loss: {test_loss:.3f}")
+    return test_loss
 
     if plot_sample:
         images, height, weight, bmi = next(iter(test_loader))
@@ -134,3 +134,17 @@ def test_model(test_loader, model, plot_sample=True):
         figure_path = join(cfg.visualization_path, "test_sample.png")
         fig.savefig(figure_path)
         plt.close(fig)
+
+
+def plot_sample(data_loader, model):
+    model.load_state_dict(torch.load('../models/trained/best_model.pt'))
+
+    images, height, weight, bmi = next(iter(data_loader))
+    predictions = model(images)
+    images = images.numpy()
+    fig = plt.figure(figsize=(25, cfg.batch_size))
+    for idx in np.arange(cfg.batch_size):
+        ax = fig.add_subplot(4, cfg.batch_size/4, idx+1, xticks=[], yticks=[])
+        plt.imshow(np.transpose(images[idx, :], (1, 2, 0)))
+        ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), bmi[idx, :].item(
+        )), color=("green" if predictions[idx, :].item() == bmi[idx, :].item() else "red"))
