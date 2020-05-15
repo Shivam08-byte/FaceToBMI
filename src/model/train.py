@@ -78,10 +78,10 @@ def train_model(train_loader, valid_loader, model):
             #     "Validating loss: {:.3f}".format(valid_loss)
             # )
             if valid_loss <= valid_loss_min:
-                print('\t\tEpoch: {}/{}.. Validation loss decreased ({:.6f} --> {:.6f}).  Saving model ...'.format(
+                print('\t\tEpoch: {}/{}\tValidation loss decreased ({:.6f} --> {:.6f})\tSaving model'.format(
                     epoch+1, cfg.epochs, valid_loss_min, valid_loss))
                 torch.save(model.state_dict(),
-                           '../models/trained/best_model.pt')
+                           join(cfg.trained_model_path, 'best_model.pt'))
                 valid_loss_min = valid_loss
 
     fig = plt.figure(figsize=(25, cfg.epochs))

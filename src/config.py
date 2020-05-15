@@ -22,6 +22,7 @@ class Config:
     # Path for model
     model_path = join(root, "models")
     pretrained_model_path = join(model_path, "pretrained")
+    trained_model_path = join(model_path, "trained")
     init_model_file = join(pretrained_model_path, "init_model.pt")
 
     # Setup variables
