@@ -5,8 +5,8 @@ from torch import nn, optim
 import matplotlib.pyplot as plt
 from os.path import join
 
-# train_on_gpu = torch.cuda.is_available()
-train_on_gpu = False  # For laptop
+train_on_gpu = torch.cuda.is_available()
+# train_on_gpu = False  # For laptop
 
 
 def get_criterion():
