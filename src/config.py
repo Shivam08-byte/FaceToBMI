@@ -9,14 +9,23 @@ class Config:
     data_path = join(root, "data")
     src_path = join(root, "src")
     raw_data_path = join(data_path, "raw")
+
     intermediate_data_path = join(data_path, "interim")
     full_annotation_file = join(intermediate_data_path, "full_annotation.csv")
     female_annotation_file = join(
         intermediate_data_path, "female_annotation.csv")
     male_annotation_file = join(intermediate_data_path, "male_annotation.csv")
+
     image_path = join(data_path, "images")
+
     processed_path = join(data_path, "processed")
     total_data_processed_file = join(processed_path, "total_dataset.pt")
+
+    external_data_path = join(data_path, "external")
+    test_data_path = join(data_path, "test_data")
+    raw_test_data_path = join(intermediate_data_path, "images")
+    cropped_data_path = join(test_data_path, "images")
+
     visualization_path = join(src_path, "visualization")
 
     # Path for model
@@ -35,6 +44,9 @@ class Config:
     power = 0.75
     num_of_tries = 20  # should be 10 or more
     momentum = 0.9
+    web = "https://wiki.d-addicts.com"
+    useful_columns = ['height', 'weight', 'image-src']
+    margin = 0.1
 
 
 cfg = Config()

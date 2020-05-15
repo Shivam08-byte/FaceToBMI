@@ -30,13 +30,6 @@ conda info --envs
 conda remove --name f2b --all
 ```
 
-## If fail to import cv2
-
-```
-pip install opencv-python==3.4.2.17
-pip install opencv-contrib-python==3.4.2.17
-```
-
 ## Ubuntu conflict with ROS
 
 ```
