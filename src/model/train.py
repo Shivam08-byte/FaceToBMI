@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from os.path import join
 
 train_on_gpu = torch.cuda.is_available()
-# train_on_gpu = False  # For laptop
+# train_on_gpu = False  # for laptop
 
 
 def get_criterion():
@@ -36,7 +36,7 @@ def train_model(train_loader, valid_loader, model):
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
-    print("\tTraining models...")
+    print("\tTraining models")
     for epoch in range(cfg.epochs):
         optimizer = get_optimizer(epoch, model)
         train_loss = 0.0
@@ -80,8 +80,7 @@ def train_model(train_loader, valid_loader, model):
             if valid_loss <= valid_loss_min:
                 print('\t\tEpoch: {}/{}\tValidation loss decreased ({:.6f} --> {:.6f})\tSaving model'.format(
                     epoch+1, cfg.epochs, valid_loss_min, valid_loss))
-                torch.save(model.state_dict(),
-                           join(cfg.trained_model_path, 'best_model.pt'))
+                torch.save(model.state_dict(), cfg.best_trained_model_file)
                 valid_loss_min = valid_loss
 
     fig = plt.figure(figsize=(25, cfg.epochs))

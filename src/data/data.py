@@ -87,8 +87,8 @@ def train_val_test_split(type="full"):
     return train_loader, valid_loader, test_loader
 
 
-# if __name__ == "__main__":
-#     train_loader, valid_loader, test_loader = train_val_test_split()
-#     print("Train size", len(train_loader))
-#     print("Validation size", len(valid_loader))
-#     print("Test size", len(test_loader))
+if __name__ == "__main__":
+    train_loader, valid_loader, test_loader = train_val_test_split()
+    print("Train size", len(train_loader))
+    print("Validation size", len(valid_loader))
+    print("Test size", len(test_loader))
