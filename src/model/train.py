@@ -36,7 +36,7 @@ def train_model(train_loader, valid_loader, model):
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
-    print("\tTraining models")
+    print("\tTraining model")
     for epoch in range(cfg.epochs):
         optimizer = get_optimizer(epoch, model)
         train_loss = 0.0
@@ -93,7 +93,7 @@ def train_model(train_loader, valid_loader, model):
 
 
 def test_model(test_loader, model, plot_sample=True):
-    model.load_state_dict(torch.load('../models/trained/best_model.pt'))
+    model.load_state_dict(torch.load(cfg.best_trained_model_file))
     test_criterion = get_test_criterion()
 
     if train_on_gpu:
@@ -102,7 +102,7 @@ def test_model(test_loader, model, plot_sample=True):
 
     test_loss = 0.0
 
-    print("\tTesting model...")
+    print("\tTesting model")
     with torch.no_grad():
         model.eval()
         for images, _, _, bmi in test_loader:
@@ -112,7 +112,6 @@ def test_model(test_loader, model, plot_sample=True):
             loss = test_criterion(predictions, bmi)
             test_loss += loss.item()*images.size(0)
 
-    # average test loss
     test_loss = test_loss/len(test_loader.sampler)
     print(f"\tTesting loss: {test_loss:.3f}")
     return test_loss
@@ -136,8 +135,7 @@ def test_model(test_loader, model, plot_sample=True):
 
 
 def plot_sample(data_loader, model):
-    model.load_state_dict(torch.load('../models/trained/best_model.pt'))
-
+    model.load_state_dict(torch.load(cfg.best_trained_model_file))
     images, height, weight, bmi = next(iter(data_loader))
     predictions = model(images)
     images = images.numpy()

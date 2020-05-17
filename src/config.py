@@ -36,5 +36,8 @@ class Config:
     num_of_tries = 20  # should be 10 or more
     momentum = 0.9
 
+    default_img_width = 224
+    margin = 0.1
+
 
 cfg = Config()

@@ -64,3 +64,15 @@ pip install -r requirements.txt
 source f2b/bin/activate
 pip freeze > requirements.txt
 ```
+
+## Update virtual environment
+```
+pip install -r requirements.txt --upgrade
+```
+
+## Run demo
+```
+cd FaceToBMI/src
+python demo.py (for one face only)
+python demo.py --multiple (for many faces)
+```
