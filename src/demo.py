@@ -7,6 +7,8 @@ from contextlib import contextmanager
 from model.model import get_model
 from config import cfg
 import torch
+from data.data import data_transforms
+from PIL import Image
 
 
 def get_trained_model():
@@ -27,8 +29,7 @@ def draw_label(image, point, label, font=cv2.FONT_HERSHEY_SIMPLEX, font_scale=1,
 
 @contextmanager
 def video_capture(*args, **kwargs):
-    # cap = cv2.VideoCapture(*args, **kwargs)
-    cap = cv2.VideoCapture(-1)
+    cap = cv2.VideoCapture(*args, **kwargs)
     try:
         yield cap
     finally:
@@ -54,7 +55,6 @@ def run_demo():
     model = get_trained_model()
     print(f"Loading model to detect BMI of {single_or_multiple}")
 
-    NUMBER_OF_FRAMES_IN_AVG = 20
     last_seen_bmis = []
     detector = dlib.get_frontal_face_detector()
 
@@ -75,22 +75,26 @@ def run_demo():
                 yw2 = min(int(y2 + cfg.margin * h), img_h - 1)
                 cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
                 faces[i, :, :, :] = cv2.resize(
-                    img[yw1:yw2 + 1, xw1:xw2 + 1, :], (cfg.default_img_width, cfg.default_img_width)) / 255.00
+                    img[yw1:yw2 + 1, xw1:xw2 + 1, :], (cfg.default_img_width, cfg.default_img_width))
 
-            predictions = model.predict(faces)
+            faces = faces.astype(np.uint8).reshape(224, 224, 3)
+            faces = Image.fromarray(faces)
+            faces = data_transforms['test'](faces)
+            faces = faces.unsqueeze(0)
+            predictions = model(faces).item()
 
             if multiple_targets:
                 for i, d in enumerate(detected):
                     label = str(predictions[i][0])
                     draw_label(img, (d.left(), d.top()), label)
             else:
-                last_seen_bmis.append(predictions[0])
-                if len(last_seen_bmis) > NUMBER_OF_FRAMES_IN_AVG:
+                last_seen_bmis.append(predictions)
+                if len(last_seen_bmis) > cfg.num_of_frames:
                     last_seen_bmis.pop(0)
-                elif len(last_seen_bmis) < NUMBER_OF_FRAMES_IN_AVG:
+                elif len(last_seen_bmis) < cfg.num_of_frames:
                     continue
-                avg_bmi = sum(last_seen_bmis) / float(NUMBER_OF_FRAMES_IN_AVG)
-                label = str(avg_bmi)
+                avg_bmi = sum(last_seen_bmis) / float(cfg.num_of_frames)
+                label = "BMI:" + "{: .1f}".format(avg_bmi)
                 draw_label(img, (d.left(), d.top()), label)
 
         cv2.imshow('result', img)

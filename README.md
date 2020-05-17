@@ -76,3 +76,4 @@ cd FaceToBMI/src
 python demo.py (for one face only)
 python demo.py --multiple (for many faces)
 ```
+Press ESC to exit demo

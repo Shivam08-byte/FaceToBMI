@@ -38,6 +38,7 @@ class Config:
 
     default_img_width = 224
     margin = 0.1
+    num_of_frames = 20
 
 
 cfg = Config()
