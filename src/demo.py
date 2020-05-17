@@ -81,20 +81,20 @@ def run_demo():
             faces = Image.fromarray(faces)
             faces = data_transforms['test'](faces)
             faces = faces.unsqueeze(0)
-            predictions = model(faces).item()
+            predictions = model(faces).tolist()
 
             if multiple_targets:
                 for i, d in enumerate(detected):
                     label = str(predictions[i][0])
                     draw_label(img, (d.left(), d.top()), label)
             else:
-                last_seen_bmis.append(predictions)
+                last_seen_bmis.append(predictions[0][0])
                 if len(last_seen_bmis) > cfg.num_of_frames:
                     last_seen_bmis.pop(0)
                 elif len(last_seen_bmis) < cfg.num_of_frames:
                     continue
                 avg_bmi = sum(last_seen_bmis) / float(cfg.num_of_frames)
-                label = "BMI:" + "{: .1f}".format(avg_bmi)
+                label = "BMI:" + "{: .2f}".format(avg_bmi)
                 draw_label(img, (d.left(), d.top()), label)
 
         cv2.imshow('result', img)
