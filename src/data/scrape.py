@@ -22,7 +22,8 @@ def read_data():
         dfs.append(data)
 
     frame = pd.concat(dfs, axis=0, ignore_index=True)
-    frame.to_csv(join(cfg.intermediate_data_path, "combined_annotation.csv"))
+    frame.to_csv(join(cfg.intermediate_data_path,
+                      "combined_annotation.csv"), index=False)
     _ = frame.info()
     return frame
 
@@ -43,15 +44,15 @@ def crawl_data_from_frame(dataframe):
         cropped_path_for_file = join(cfg.cropped_data_path, images_name)
         request.urlretrieve(url, raw_path_for_file)
         dataframe.iloc[index, 2] = cropped_path_for_file
-        # if index == 10:
-        #     break
+        if index == 199:  # For testing first
+            break
 
     cols = ['image-src', 'height', 'weight', 'bmi']
     dataframe = dataframe[cols]
-    dataframe.rename(columns={'image-src': 'images',
+    dataframe.rename(columns={'image-src': 'Path',
                               'bmi': "BMI"}, inplace=True)
     dataframe.to_csv(join(cfg.intermediate_data_path,
-                          "combined_annotation.csv"))
+                          "combined_annotation.csv"), index=False)
     _ = dataframe.info()
 
 

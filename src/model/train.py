@@ -4,9 +4,10 @@ from config import cfg
 from torch import nn, optim
 import matplotlib.pyplot as plt
 from os.path import join
+from tqdm import tqdm
 
-train_on_gpu = torch.cuda.is_available()
-# train_on_gpu = False  # for laptop
+# train_on_gpu = torch.cuda.is_available()
+train_on_gpu = False  # for laptop
 
 
 def get_criterion():
@@ -92,8 +93,11 @@ def train_model(train_loader, valid_loader, model):
     plt.close(fig)
 
 
-def test_model(test_loader, model, plot_sample=True):
-    model.load_state_dict(torch.load('../models/trained/best_model.pt'))
+def test_model(test_loader, model, plot_sample=True, colab=False):
+    if colab:
+        model.load_state_dict(torch.load(cfg.best_trained_colab_model_file))
+    else:
+        model.load_state_dict(torch.load(cfg.best_trained_model_file))
     test_criterion = get_test_criterion()
 
     if train_on_gpu:
@@ -102,10 +106,10 @@ def test_model(test_loader, model, plot_sample=True):
 
     test_loss = 0.0
 
-    print("\tTesting model...")
+    print("\tTesting model")
     with torch.no_grad():
         model.eval()
-        for images, _, _, bmi in test_loader:
+        for images, _, _, bmi in tqdm(test_loader):
             if train_on_gpu:
                 images, bmi = images.cuda(), bmi.cuda()
             predictions = model(images)
@@ -115,9 +119,9 @@ def test_model(test_loader, model, plot_sample=True):
     # average test loss
     test_loss = test_loss/len(test_loader.sampler)
     print(f"\tTesting loss: {test_loss:.3f}")
-    return test_loss
 
     if plot_sample:
+        print("\tExport sampling images")
         images, height, weight, bmi = next(iter(test_loader))
         predictions = model(images)
         images = images.numpy()
@@ -134,9 +138,11 @@ def test_model(test_loader, model, plot_sample=True):
         fig.savefig(figure_path)
         plt.close(fig)
 
+    return test_loss
+
 
 def plot_sample(data_loader, model):
-    model.load_state_dict(torch.load('../models/trained/best_model.pt'))
+    model.load_state_dict(torch.load(cfg.best_trained_model_file))
 
     images, height, weight, bmi = next(iter(data_loader))
     predictions = model(images)

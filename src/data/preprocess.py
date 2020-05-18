@@ -65,7 +65,7 @@ def crop_faces(plot_images=False, max_images_to_plot=5):
         all_imgs_info = info[1:]
 
     cropped_imgs_info = [l for l in all_imgs_info if l.split(
-        ',')[1] in good_cropped_img_file_names]
+        ',')[0] in good_cropped_img_file_names]
 
     with open(cropped_annotation, 'w+') as f:
         f.write('%s\n' % column_headers)

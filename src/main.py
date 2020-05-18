@@ -4,9 +4,9 @@ from data.data import train_val_test_split
 from data.scrape import crawl_data
 
 if __name__ == '__main__':
-    # train_loader, valid_loader, test_loader = train_val_test_split()
-    # model = get_model()
+    train_loader, valid_loader, test_loader = train_val_test_split("test")
+    model = get_model()
     # train_model(train_loader=train_loader,
     #             valid_loader=valid_loader, model=model)
-    # test_model(test_loader=test_loader, model=model)
-    crawl_data()
+    test_model(test_loader=test_loader, model=model, colab=True)
+    # crawl_data()

@@ -25,6 +25,7 @@ class Config:
     test_data_path = join(data_path, "test_data")
     raw_test_data_path = join(intermediate_data_path, "images")
     cropped_data_path = join(test_data_path, "images")
+    test_data_annotation_file = join(test_data_path, "annotation.csv")
 
     visualization_path = join(src_path, "visualization")
 
@@ -33,6 +34,8 @@ class Config:
     pretrained_model_path = join(model_path, "pretrained")
     trained_model_path = join(model_path, "trained")
     best_trained_model_file = join(trained_model_path, 'best_model.pt')
+    best_trained_colab_model_file = join(
+        trained_model_path, 'best_model_colab.pt')
     init_model_file = join(pretrained_model_path, "init_model.pt")
 
     # Setup variables
