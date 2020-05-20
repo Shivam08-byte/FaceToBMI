@@ -35,12 +35,12 @@ data_transforms = {
 
 class FaceToBMIDataset(Dataset):
     def __init__(self, csv_file, image_dir):
-        self.annotaion = pd.read_csv(csv_file)
+        self.annotation = pd.read_csv(csv_file, index_col=False)
         self.image_dir = image_dir
         self.set_transform()
 
     def __len__(self):
-        return len(self.annotaion)
+        return len(self.annotation)
 
     def set_transform(self, type=None):
         if type == "train":
@@ -55,15 +55,15 @@ class FaceToBMIDataset(Dataset):
     def __getitem__(self, idx):
         if torch.is_tensor(idx):
             idx = idx.tolist()
-        img_path = self.annotaion.iloc[idx, 0]
+        img_path = self.annotation.iloc[idx, 0]
         image = Image.open(img_path)
         image = self.transform(image)
         height = torch.from_numpy(
-            self.annotaion.iloc[idx, 1].reshape(-1, 1).squeeze(axis=1)).float()
+            self.annotation.iloc[idx, 1].reshape(-1, 1).squeeze(axis=1)).float()
         weight = torch.from_numpy(
-            self.annotaion.iloc[idx, 2].reshape(-1, 1).squeeze(axis=1)).float()
+            self.annotation.iloc[idx, 2].reshape(-1, 1).squeeze(axis=1)).float()
         bmi = torch.from_numpy(
-            self.annotaion.iloc[idx, 3].reshape(-1, 1).squeeze(axis=1)).float()
+            self.annotation.iloc[idx, 3].reshape(-1, 1).squeeze(axis=1)).float()
         return image, height, weight, bmi
 
 
@@ -75,15 +75,27 @@ def train_val_test_split(type="full"):
     elif type == "female":
         dataset = FaceToBMIDataset(
             csv_file=cfg.female_annotation_file, image_dir=cfg.image_path)
-    else:
+    elif type == "male":
         dataset = FaceToBMIDataset(
             csv_file=cfg.male_annotation_file, image_dir=cfg.image_path)
-    split = DataSplit(dataset, shuffle=True)
+    elif type == "test":
+        dataset = FaceToBMIDataset(
+            csv_file=cfg.test_data_annotation_file, image_dir=cfg.cropped_data_path)
+
+    if type == "test":
+        split = DataSplit(dataset=dataset, test_train_split=0)
+    else:
+        split = DataSplit(dataset, shuffle=True)
+
     train_loader, valid_loader, test_loader = split.get_split(
         batch_size=cfg.batch_size)
+
     train_loader.dataset.set_transform("train")
     valid_loader.dataset.set_transform("val")
     test_loader.dataset.set_transform("test")
+    print("Train size", len(train_loader))
+    print("Validation size", len(valid_loader))
+    print("Test size", len(test_loader))
     return train_loader, valid_loader, test_loader
 
 
