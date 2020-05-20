@@ -1,11 +1,12 @@
 from model.model import get_model
 from model.train import train_model, test_model
 from data.data import train_val_test_split
-
+from data.scrape import crawl_data
 
 if __name__ == '__main__':
-    train_loader, valid_loader, test_loader = train_val_test_split()
+    train_loader, valid_loader, test_loader = train_val_test_split("test")
     model = get_model()
-    train_model(train_loader=train_loader,
-                valid_loader=valid_loader, model=model)
-    test_model(test_loader=test_loader, model=model)
+    # train_model(train_loader=train_loader,
+    #             valid_loader=valid_loader, model=model)
+    test_model(test_loader=test_loader, model=model, colab=True)
+    # crawl_data()
