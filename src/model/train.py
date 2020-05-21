@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from os.path import join
 from tqdm import tqdm
 
-# train_on_gpu = torch.cuda.is_available()
-train_on_gpu = False  # for laptop
+train_on_gpu = torch.cuda.is_available()
+# train_on_gpu = False  # for laptop
 
 
 def get_criterion():
@@ -46,7 +46,7 @@ def train_model(train_loader, valid_loader, model):
         # train the model #
         ###################
         model.train()
-        for images, _, _, bmi in train_loader:
+        for images, _, _, bmi in tqdm(train_loader):
             if train_on_gpu:
                 images, bmi = images.cuda(), bmi.cuda()
             # print(images.is_cuda, bmi.is_cuda, next(model.parameters()).is_cuda) check if all varibale is on GPU
@@ -73,11 +73,6 @@ def train_model(train_loader, valid_loader, model):
             valid_loss = valid_loss/len(valid_loader.sampler)
             train_losses.append(train_loss)
             valid_losses.append(valid_loss)
-            # print(
-            #     "Epoch: {}/{}..".format(epoch+1, cfg.epochs),
-            #     "Training loss: {:.3f}".format(train_loss),
-            #     "Validating loss: {:.3f}".format(valid_loss)
-            # )
             if valid_loss <= valid_loss_min:
                 print('\t\tEpoch: {}/{}\tValidation loss decreased ({:.6f} --> {:.6f})\tSaving model'.format(
                     epoch+1, cfg.epochs, valid_loss_min, valid_loss))
@@ -96,6 +91,8 @@ def train_model(train_loader, valid_loader, model):
 def test_model(test_loader, model, plot_sample=True, colab=False):
     if colab:
         model.load_state_dict(torch.load(cfg.best_trained_colab_model_file))
+        # model.load_state_dict(torch.load(
+        #     cfg.best_trained_colab_model_file, map_location=torch.device('cpu')))
     else:
         model.load_state_dict(torch.load(cfg.best_trained_model_file))
     test_criterion = get_test_criterion()
@@ -143,7 +140,6 @@ def test_model(test_loader, model, plot_sample=True, colab=False):
 
 def plot_sample(data_loader, model):
     model.load_state_dict(torch.load(cfg.best_trained_model_file))
-
     images, height, weight, bmi = next(iter(data_loader))
     predictions = model(images)
     images = images.numpy()
