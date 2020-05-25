@@ -68,19 +68,29 @@ class FaceToBMIDataset(Dataset):
 
 
 def train_val_test_split(type="full"):
-    # dataset = torch.load(cfg.total_data_processed_file)
+    dataset_name = ""
     if type == "full":
         dataset = FaceToBMIDataset(
             csv_file=cfg.full_annotation_file, image_dir=cfg.image_path)
+        dataset_name = "Full western data!"
     elif type == "female":
         dataset = FaceToBMIDataset(
             csv_file=cfg.female_annotation_file, image_dir=cfg.image_path)
+        dataset_name = "Western female data!"
     elif type == "male":
         dataset = FaceToBMIDataset(
             csv_file=cfg.male_annotation_file, image_dir=cfg.image_path)
+        dataset_name = "Western male data!"
+    # For testing western model on asian data
     elif type == "test":
+        dataset_name = "Asian test data!"
         dataset = FaceToBMIDataset(
             csv_file=cfg.test_data_annotation_file, image_dir=cfg.cropped_data_path)
+    # For loading only asian data
+    elif type == "asia":
+        dataset_name = "Full asian data!"
+        dataset = FaceToBMIDataset(
+            csv_file=cfg.asia_data_annotation_file, image_dir=cfg.asian_data_path)
 
     if type == "test":
         split = DataSplit(dataset=dataset, test_train_split=0)
@@ -93,9 +103,10 @@ def train_val_test_split(type="full"):
     train_loader.dataset.set_transform("train")
     valid_loader.dataset.set_transform("val")
     test_loader.dataset.set_transform("test")
-    print("Train size", len(train_loader))
-    print("Validation size", len(valid_loader))
-    print("Test size", len(test_loader))
+    print(f"\n\tTraining with {dataset_name}")
+    print(f"\tTrain size: {len(train_loader)*cfg.batch_size} images")
+    print(f"\tValidation size: {len(valid_loader)*cfg.batch_size} images")
+    print(f"\tTest size: {len(test_loader)*cfg.batch_size} images")
     return train_loader, valid_loader, test_loader
 
 

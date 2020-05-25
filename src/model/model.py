@@ -9,7 +9,7 @@ import os
 os.environ['TORCH_HOME'] = cfg.pretrained_model_path
 
 
-def get_model():
+def get_model(is_continue=False):
     resnet50 = models.resnet50(pretrained=True)
     for param in resnet50.parameters():
         param.requires_grad = False
@@ -17,4 +17,7 @@ def get_model():
         ("output", nn.Linear(2048, 1))
     ]))
     resnet50.fc = fc
+
+    if is_continue:
+        resnet50.load_state_dict(torch.load(cfg.best_trained_model_file))
     return resnet50
