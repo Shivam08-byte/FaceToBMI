@@ -104,9 +104,9 @@ def train_val_test_split(type="full"):
     valid_loader.dataset.set_transform("val")
     test_loader.dataset.set_transform("test")
     print(f"\tTraining with {dataset_name}")
-    print("\tTrain size", len(train_loader)*cfg.batch_size)
-    print("\tValidation size", len(valid_loader)*cfg.batch_size)
-    print("\tTest size", len(test_loader)*cfg.batch_size)
+    print(f"\tTrain size: {len(train_loader)*cfg.batch_size} images")
+    print(f"\tValidation size: {len(valid_loader)*cfg.batch_size} images")
+    print(f"\tTest size: {len(test_loader)*cfg.batch_size} images")
     return train_loader, valid_loader, test_loader
 
 

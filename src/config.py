@@ -33,10 +33,6 @@ class Config:
     model_path = join(root, "models")
     pretrained_model_path = join(model_path, "pretrained")
     trained_model_path = join(model_path, "trained")
-    best_trained_model_file = join(trained_model_path, 'best_model.pt')
-    best_trained_colab_model_file = join(
-        trained_model_path, 'best_model_colab.pt')
-    init_model_file = join(pretrained_model_path, "init_model.pt")
 
     # Setup variables
     batch_size = 16

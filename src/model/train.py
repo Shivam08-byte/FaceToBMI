@@ -36,7 +36,7 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
-    print(f"\tTraining models for {epochs} epochs")
+    print(f"\tTraining models for {epochs} epochs with target is {target}")
     for epoch in range(epochs):
         optimizer = get_optimizer(epoch, model)
         train_loss = 0.0
@@ -75,20 +75,25 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
             if valid_loss <= valid_loss_min:
                 print('\t\tEpoch: {}/{}\tValidation loss decreased ({:.6f} --> {:.6f})\tSaving model'.format(
                     epoch+1, epochs, valid_loss_min, valid_loss))
-                torch.save(model.state_dict(), cfg.best_trained_model_file)
+                file_name = target + '_best_model.pt'
+                file_address = join(cfg.trained_model_path, file_name)
+                torch.save(model.state_dict(), file_address)
                 valid_loss_min = valid_loss
 
     fig = plt.figure(figsize=(25, epochs))
     plt.plot(train_losses, label='Training loss')
     plt.plot(valid_losses, label='Validation loss')
     _ = plt.legend(frameon=False)
-    figure_path = join(cfg.visualization_path, "train_valid.png")
+    file_name = target + "_train_valid.png"
+    figure_path = join(cfg.visualization_path, file_name)
     fig.savefig(figure_path)
     plt.close(fig)
 
 
 def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, target="bmi"):
-    model.load_state_dict(torch.load(cfg.best_trained_model_file))
+    file_name = target + '_best_model.pt'
+    file_address = join(cfg.trained_model_path, file_name)
+    model.load_state_dict(torch.load(file_address))
     test_criterion = get_test_criterion()
 
     if train_on_gpu:
@@ -97,7 +102,7 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
 
     test_loss = 0.0
 
-    print("\tTesting model")
+    print(f"\tTesting model with target {target}")
     with torch.no_grad():
         model.eval()
         for images, height, weight, bmi in tqdm(test_loader):
@@ -130,7 +135,7 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
         images, height, weight, bmi = next(iter(test_loader))
         predictions = model(images)
         images = images.numpy()
-        fig = plt.figure(figsize=(25, cfg.batch_size))
+        fig = plt.figure(figsize=(20, cfg.batch_size))
         for idx in np.arange(cfg.batch_size):
             ax = fig.add_subplot(4, cfg.batch_size/4,
                                  idx+1, xticks=[], yticks=[])
@@ -153,11 +158,13 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
 
 
 def plot_sample(data_loader, model, target="bmi"):
-    model.load_state_dict(torch.load(cfg.best_trained_model_file))
+    file_name = target + '_best_model.pt'
+    file_address = join(cfg.trained_model_path, file_name)
+    model.load_state_dict(torch.load(file_address))
     images, height, weight, bmi = next(iter(data_loader))
     predictions = model(images)
     images = images.numpy()
-    fig = plt.figure(figsize=(25, cfg.batch_size))
+    fig = plt.figure(figsize=(20, cfg.batch_size))
     for idx in np.arange(cfg.batch_size):
         ax = fig.add_subplot(4, cfg.batch_size/4, idx+1, xticks=[], yticks=[])
         plt.imshow(np.transpose(images[idx, :], (1, 2, 0)))
