@@ -1,12 +1,12 @@
 import logging
 from functools import lru_cache
-
 import torch
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
 
 import numpy as np
+
 
 class DataSplit:
 
@@ -20,11 +20,13 @@ class DataSplit:
         if shuffle:
             np.random.shuffle(self.indices)
 
-        train_indices, self.test_indices = self.indices[:test_split], self.indices[test_split:]
+        train_indices, self.test_indices = self.indices[:
+                                                        test_split], self.indices[test_split:]
         train_size = len(train_indices)
         validation_split = int(np.floor((1 - val_train_split) * train_size))
 
-        self.train_indices, self.val_indices = train_indices[ : validation_split], train_indices[validation_split:]
+        self.train_indices, self.val_indices = train_indices[:
+                                                             validation_split], train_indices[validation_split:]
 
         self.train_sampler = SubsetRandomSampler(self.train_indices)
         self.val_sampler = SubsetRandomSampler(self.val_indices)
@@ -39,25 +41,31 @@ class DataSplit:
     @lru_cache(maxsize=4)
     def get_split(self, batch_size=16, num_workers=0):
         logging.debug('Initializing train-validation-test dataloaders')
-        self.train_loader = self.get_train_loader(batch_size=batch_size, num_workers=num_workers)
-        self.val_loader = self.get_validation_loader(batch_size=batch_size, num_workers=num_workers)
-        self.test_loader = self.get_test_loader(batch_size=batch_size, num_workers=num_workers)
+        self.train_loader = self.get_train_loader(
+            batch_size=batch_size, num_workers=num_workers)
+        self.val_loader = self.get_validation_loader(
+            batch_size=batch_size, num_workers=num_workers)
+        self.test_loader = self.get_test_loader(
+            batch_size=batch_size, num_workers=num_workers)
         return self.train_loader, self.val_loader, self.test_loader
 
     @lru_cache(maxsize=4)
     def get_train_loader(self, batch_size=16, num_workers=4):
         logging.debug('Initializing train dataloader')
-        self.train_loader = torch.utils.data.DataLoader(self.dataset, batch_size=batch_size, sampler=self.train_sampler, shuffle=False, num_workers=num_workers)
+        self.train_loader = torch.utils.data.DataLoader(
+            self.dataset, batch_size=batch_size, sampler=self.train_sampler, shuffle=False, num_workers=num_workers)
         return self.train_loader
 
     @lru_cache(maxsize=4)
     def get_validation_loader(self, batch_size=16, num_workers=4):
         logging.debug('Initializing validation dataloader')
-        self.val_loader = torch.utils.data.DataLoader(self.dataset, batch_size=batch_size, sampler=self.val_sampler, shuffle=False, num_workers=num_workers)
+        self.val_loader = torch.utils.data.DataLoader(
+            self.dataset, batch_size=batch_size, sampler=self.val_sampler, shuffle=False, num_workers=num_workers)
         return self.val_loader
 
     @lru_cache(maxsize=4)
     def get_test_loader(self, batch_size=16, num_workers=4):
         logging.debug('Initializing test dataloader')
-        self.test_loader = torch.utils.data.DataLoader(self.dataset, batch_size=batch_size, sampler=self.test_sampler, shuffle=False, num_workers=num_workers)
+        self.test_loader = torch.utils.data.DataLoader(
+            self.dataset, batch_size=batch_size, sampler=self.test_sampler, shuffle=False, num_workers=num_workers)
         return self.test_loader
