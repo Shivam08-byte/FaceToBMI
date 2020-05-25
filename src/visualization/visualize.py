@@ -21,7 +21,7 @@ def statistical_plot(data=[], target="bmi"):
     file_address = join(cfg.visualization_path, file_name)
     fig.savefig(file_address)
 
-    plt.figure(figsize=(10, 3))
+    plt.figure(figsize=(10, 5))
     sns.set_color_codes("pastel")
     ax = sns.boxplot(x="Test loss", data=df)
     fig = ax.get_figure()
