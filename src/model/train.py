@@ -80,7 +80,7 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
                 torch.save(model.state_dict(), file_address)
                 valid_loss_min = valid_loss
 
-    fig = plt.figure(figsize=(25, epochs))
+    fig = plt.figure(figsize=(12, epochs))
     plt.plot(train_losses, label='Training loss')
     plt.plot(valid_losses, label='Validation loss')
     _ = plt.legend(frameon=False)
@@ -102,7 +102,7 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
 
     test_loss = 0.0
 
-    print(f"\tTesting model with target {target}")
+    print(f"\n\tTesting model with target {target}")
     with torch.no_grad():
         model.eval()
         for images, height, weight, bmi in tqdm(test_loader):
@@ -155,25 +155,3 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
         plt.close(fig)
 
     return test_loss
-
-
-def plot_sample(data_loader, model, target="bmi"):
-    file_name = target + '_best_model.pt'
-    file_address = join(cfg.trained_model_path, file_name)
-    model.load_state_dict(torch.load(file_address))
-    images, height, weight, bmi = next(iter(data_loader))
-    predictions = model(images)
-    images = images.numpy()
-    fig = plt.figure(figsize=(20, cfg.batch_size))
-    for idx in np.arange(cfg.batch_size):
-        ax = fig.add_subplot(4, cfg.batch_size/4, idx+1, xticks=[], yticks=[])
-        plt.imshow(np.transpose(images[idx, :], (1, 2, 0)))
-        if target == "bmi":
-            ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), bmi[idx, :].item(
-            )), color=("green" if predictions[idx, :].item() == bmi[idx, :].item() else "red"))
-        elif target == "height":
-            ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), height[idx, :].item(
-            )), color=("green" if predictions[idx, :].item() == height[idx, :].item() else "red"))
-        elif target == "weight":
-            ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), weight[idx, :].item(
-            )), color=("green" if predictions[idx, :].item() == weight[idx, :].item() else "red"))
