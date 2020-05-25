@@ -6,8 +6,7 @@ import matplotlib.pyplot as plt
 from os.path import join
 from tqdm import tqdm
 
-train_on_gpu = torch.cuda.is_available()
-# train_on_gpu = False  # for laptop
+is_cuda = torch.cuda.is_available()
 
 
 def get_criterion():
@@ -28,7 +27,7 @@ def get_test_criterion():
     return test_criterion
 
 
-def train_model(train_loader, valid_loader, model):
+def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=cfg.epochs, target="bmi"):
     criterion = get_criterion()
 
     if train_on_gpu:
@@ -37,8 +36,8 @@ def train_model(train_loader, valid_loader, model):
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
-    print("\tTraining models")
-    for epoch in range(cfg.epochs):
+    print(f"\tTraining models for {epochs} epochs")
+    for epoch in range(epochs):
         optimizer = get_optimizer(epoch, model)
         train_loss = 0.0
         valid_loss = 0.0
@@ -46,7 +45,7 @@ def train_model(train_loader, valid_loader, model):
         # train the model #
         ###################
         model.train()
-        for images, _, _, bmi in tqdm(train_loader):
+        for images, height, weight, bmi in tqdm(train_loader):
             if train_on_gpu:
                 images, bmi = images.cuda(), bmi.cuda()
             # print(images.is_cuda, bmi.is_cuda, next(model.parameters()).is_cuda) check if all varibale is on GPU
@@ -75,11 +74,11 @@ def train_model(train_loader, valid_loader, model):
             valid_losses.append(valid_loss)
             if valid_loss <= valid_loss_min:
                 print('\t\tEpoch: {}/{}\tValidation loss decreased ({:.6f} --> {:.6f})\tSaving model'.format(
-                    epoch+1, cfg.epochs, valid_loss_min, valid_loss))
+                    epoch+1, epochs, valid_loss_min, valid_loss))
                 torch.save(model.state_dict(), cfg.best_trained_model_file)
                 valid_loss_min = valid_loss
 
-    fig = plt.figure(figsize=(25, cfg.epochs))
+    fig = plt.figure(figsize=(25, epochs))
     plt.plot(train_losses, label='Training loss')
     plt.plot(valid_losses, label='Validation loss')
     _ = plt.legend(frameon=False)
@@ -88,13 +87,8 @@ def train_model(train_loader, valid_loader, model):
     plt.close(fig)
 
 
-def test_model(test_loader, model, plot_sample=True, colab=False):
-    if colab:
-        model.load_state_dict(torch.load(cfg.best_trained_colab_model_file))
-        # model.load_state_dict(torch.load(
-        #     cfg.best_trained_colab_model_file, map_location=torch.device('cpu')))
-    else:
-        model.load_state_dict(torch.load(cfg.best_trained_model_file))
+def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, target="bmi"):
+    model.load_state_dict(torch.load(cfg.best_trained_model_file))
     test_criterion = get_test_criterion()
 
     if train_on_gpu:
@@ -106,11 +100,25 @@ def test_model(test_loader, model, plot_sample=True, colab=False):
     print("\tTesting model")
     with torch.no_grad():
         model.eval()
-        for images, _, _, bmi in tqdm(test_loader):
+        for images, height, weight, bmi in tqdm(test_loader):
             if train_on_gpu:
-                images, bmi = images.cuda(), bmi.cuda()
+                images = images.cuda()
             predictions = model(images)
-            loss = test_criterion(predictions, bmi)
+            if target == "bmi":
+                if train_on_gpu:
+                    bmi = bmi.cuda()
+                loss = test_criterion(predictions, bmi)
+            elif target == "height":
+                if train_on_gpu:
+                    height = height.cuda()
+                loss = test_criterion(predictions, height)
+            elif target == "weight":
+                if train_on_gpu:
+                    weight = weight.cuda()
+                loss = test_criterion(predictions, weight)
+            else:
+                print("Unknown target")
+                return
             test_loss += loss.item()*images.size(0)
 
     # average test loss
@@ -127,18 +135,24 @@ def test_model(test_loader, model, plot_sample=True, colab=False):
             ax = fig.add_subplot(4, cfg.batch_size/4,
                                  idx+1, xticks=[], yticks=[])
             plt.imshow(np.transpose(images[idx, :], (1, 2, 0)))
-            ax.set_title(
-                "Predicted:{:.2f}/ Actual: {:.2f}".format(
-                    predictions[idx, :].item(), bmi[idx, :].item()),
-                color=("green" if predictions[idx, :].item() == bmi[idx, :].item() else "red"))
-        figure_path = join(cfg.visualization_path, "test_sample.png")
+            if target == "bmi":
+                ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), bmi[idx, :].item(
+                )), color=("green" if predictions[idx, :].item() == bmi[idx, :].item() else "red"))
+            elif target == "height":
+                ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), height[idx, :].item(
+                )), color=("green" if predictions[idx, :].item() == height[idx, :].item() else "red"))
+            elif target == "weight":
+                ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), weight[idx, :].item(
+                )), color=("green" if predictions[idx, :].item() == weight[idx, :].item() else "red"))
+        file_name = target + "_test_sample.png"
+        figure_path = join(cfg.visualization_path, file_name)
         fig.savefig(figure_path)
         plt.close(fig)
 
     return test_loss
 
 
-def plot_sample(data_loader, model):
+def plot_sample(data_loader, model, target="bmi"):
     model.load_state_dict(torch.load(cfg.best_trained_model_file))
     images, height, weight, bmi = next(iter(data_loader))
     predictions = model(images)
@@ -147,5 +161,12 @@ def plot_sample(data_loader, model):
     for idx in np.arange(cfg.batch_size):
         ax = fig.add_subplot(4, cfg.batch_size/4, idx+1, xticks=[], yticks=[])
         plt.imshow(np.transpose(images[idx, :], (1, 2, 0)))
-        ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), bmi[idx, :].item(
-        )), color=("green" if predictions[idx, :].item() == bmi[idx, :].item() else "red"))
+        if target == "bmi":
+            ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), bmi[idx, :].item(
+            )), color=("green" if predictions[idx, :].item() == bmi[idx, :].item() else "red"))
+        elif target == "height":
+            ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), height[idx, :].item(
+            )), color=("green" if predictions[idx, :].item() == height[idx, :].item() else "red"))
+        elif target == "weight":
+            ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), weight[idx, :].item(
+            )), color=("green" if predictions[idx, :].item() == weight[idx, :].item() else "red"))
