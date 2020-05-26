@@ -4,7 +4,6 @@ import torch
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
-
 import numpy as np
 
 
@@ -39,7 +38,7 @@ class DataSplit:
         return len(self.train_sampler)
 
     @lru_cache(maxsize=4)
-    def get_split(self, batch_size=16, num_workers=0):
+    def get_split(self, batch_size=16, num_workers=4):
         logging.debug('Initializing train-validation-test dataloaders')
         self.train_loader = self.get_train_loader(
             batch_size=batch_size, num_workers=num_workers)

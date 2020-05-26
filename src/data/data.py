@@ -6,6 +6,7 @@ from PIL import Image
 from datasplit import DataSplit
 from config import cfg
 
+is_cuda = torch.cuda.is_available()
 
 data_transforms = {
     "default": transforms.Compose([
@@ -98,12 +99,12 @@ def train_val_test_split(type="full"):
         split = DataSplit(dataset, shuffle=True)
 
     train_loader, valid_loader, test_loader = split.get_split(
-        batch_size=cfg.batch_size)
+        batch_size=cfg.batch_size, num_workers=is_cuda*4)
 
     train_loader.dataset.set_transform("train")
     valid_loader.dataset.set_transform("val")
     test_loader.dataset.set_transform("test")
-    print(f"\n\tTraining with {dataset_name}")
+    print(f"\tTraining with {dataset_name}")
     print(f"\tTrain size: {len(train_loader)*cfg.batch_size} images")
     print(f"\tValidation size: {len(valid_loader)*cfg.batch_size} images")
     print(f"\tTest size: {len(test_loader)*cfg.batch_size} images")
