@@ -46,11 +46,25 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
         model.train()
         for images, height, weight, bmi in train_loader:
             if train_on_gpu:
-                images, bmi = images.cuda(), bmi.cuda()
-            # print(images.is_cuda, bmi.is_cuda, next(model.parameters()).is_cuda) check if all varibale is on GPU
+                images = images.cuda()
             optimizer.zero_grad()
             predictions = model(images)
-            loss = criterion(predictions, bmi)
+
+            if target == "bmi":
+                if train_on_gpu:
+                    bmi = bmi.cuda()
+                loss = criterion(predictions, bmi)
+            elif target == "height":
+                if train_on_gpu:
+                    height = height.cuda()
+                loss = criterion(predictions, height)
+            elif target == "weight":
+                if train_on_gpu:
+                    weight = weight.cuda()
+                loss = criterion(predictions, weight)
+            else:
+                print("Unknown target")
+                return
             loss.backward()
             optimizer.step()
             train_loss += loss.item()*images.size(0)
@@ -60,11 +74,26 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
         else:
             with torch.no_grad():
                 model.eval()
-                for images, _, _, bmi in valid_loader:
+                for images, height, weight, bmi in valid_loader:
                     if train_on_gpu:
-                        images, bmi = images.cuda(), bmi.cuda()
+                        images = images.cuda()
                     predictions = model(images)
-                    loss = criterion(predictions, bmi)
+                    if target == "bmi":
+                        if train_on_gpu:
+                            bmi = bmi.cuda()
+                        loss = criterion(predictions, bmi)
+                    elif target == "height":
+                        if train_on_gpu:
+                            height = height.cuda()
+                        loss = criterion(predictions, height)
+                    elif target == "weight":
+                        if train_on_gpu:
+                            weight = weight.cuda()
+                        loss = criterion(predictions, weight)
+                    else:
+                        print("Unknown target")
+                        return
+
                     valid_loss += loss.item()*images.size(0)
 
             train_loss = train_loss/len(train_loader.sampler)
