@@ -41,7 +41,7 @@ class Config:
     weight_decay = 0.0005
     gamma = 0.001
     power = 0.75
-    num_of_tries = 10  # should be 10 or more
+    num_of_tries = 20  # should be 10 or more
     momentum = 0.9
     web = "https://wiki.d-addicts.com"
     useful_columns = ['height', 'weight', 'image-src']

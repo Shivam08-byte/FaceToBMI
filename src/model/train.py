@@ -4,7 +4,6 @@ from config import cfg
 from torch import nn, optim
 import matplotlib.pyplot as plt
 from os.path import join
-from tqdm import tqdm
 
 is_cuda = torch.cuda.is_available()
 
@@ -36,7 +35,7 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
-    print(f"\tTraining models for {epochs} epochs with target is {target}")
+    print(f"\tTraining model for {epochs} epochs with target is {target}")
     for epoch in range(epochs):
         optimizer = get_optimizer(epoch, model)
         train_loss = 0.0
@@ -45,7 +44,7 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
         # train the model #
         ###################
         model.train()
-        for images, height, weight, bmi in tqdm(train_loader):
+        for images, height, weight, bmi in train_loader:
             if train_on_gpu:
                 images, bmi = images.cuda(), bmi.cuda()
             # print(images.is_cuda, bmi.is_cuda, next(model.parameters()).is_cuda) check if all varibale is on GPU
@@ -102,10 +101,10 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
 
     test_loss = 0.0
 
-    print(f"\n\tTesting model with target {target}")
+    print(f"\tTesting model with target {target}")
     with torch.no_grad():
         model.eval()
-        for images, height, weight, bmi in tqdm(test_loader):
+        for images, height, weight, bmi in test_loader:
             if train_on_gpu:
                 images = images.cuda()
             predictions = model(images)
@@ -133,7 +132,10 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
     if plot_sample:
         print("\tExport sampling images")
         images, height, weight, bmi = next(iter(test_loader))
-        predictions = model(images)
+        if train_on_gpu:
+            predictions = model(images.cuda())
+        else:
+            predictions = model(images)
         images = images.numpy()
         fig = plt.figure(figsize=(20, cfg.batch_size))
         for idx in np.arange(cfg.batch_size):

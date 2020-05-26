@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 from config import cfg
 from os.path import join
+import torch
 
 
 def statistical_plot(data=[], target="bmi"):
@@ -15,7 +16,7 @@ def statistical_plot(data=[], target="bmi"):
 
     plt.figure(figsize=(10, 10))
     sns.set_color_codes("pastel")
-    ax = sns.distplot(df['Test loss'], bins=cfg.num_of_tries)
+    ax = sns.distplot(df['Test loss'], bins=int(cfg.num_of_tries/2))
     fig = ax.get_figure()
     file_name = target + "_test_distribution.png"
     file_address = join(cfg.visualization_path, file_name)
@@ -31,9 +32,10 @@ def statistical_plot(data=[], target="bmi"):
 
 
 def plot_sample(data_loader, model, target="bmi"):
+    device = torch.device('cpu')
     file_name = target + '_best_model.pt'
     file_address = join(cfg.trained_model_path, file_name)
-    model.load_state_dict(torch.load(file_address))
+    model.load_state_dict(torch.load(file_address, map_location=device))
     images, height, weight, bmi = next(iter(data_loader))
     predictions = model(images)
     images = images.numpy()
