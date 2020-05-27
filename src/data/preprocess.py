@@ -27,6 +27,7 @@ def pad_img_to_fit_bbox(img, x1, x2, y1, y2):
 
 def crop_faces(plot_images=False, max_images_to_plot=5):
     bad_crop_count = 0
+    testing_size = 0
     cropped_annotation = join(cfg.test_data_path, "annotation.csv")
     if not exists(cfg.cropped_data_path):
         makedirs(cfg.cropped_data_path)

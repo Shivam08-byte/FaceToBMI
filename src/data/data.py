@@ -68,9 +68,10 @@ class FaceToBMIDataset(Dataset):
         return image, height, weight, bmi
 
 
-def train_val_test_split(type="full"):
+# must fix in jupyter notebook from full to western
+def train_val_test_split(type="west"):
     dataset_name = ""
-    if type == "full":
+    if type == "west":
         dataset = FaceToBMIDataset(
             csv_file=cfg.full_annotation_file, image_dir=cfg.image_path)
         dataset_name = "Full western data!"
@@ -104,7 +105,7 @@ def train_val_test_split(type="full"):
     train_loader.dataset.set_transform("train")
     valid_loader.dataset.set_transform("val")
     test_loader.dataset.set_transform("test")
-    print(f"\tTraining with {dataset_name}")
+    print(f"\tRunning with {dataset_name}")
     print(f"\tTrain size: {len(train_loader)*cfg.batch_size} images")
     print(f"\tValidation size: {len(valid_loader)*cfg.batch_size} images")
     print(f"\tTest size: {len(test_loader)*cfg.batch_size} images")

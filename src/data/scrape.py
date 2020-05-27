@@ -38,12 +38,7 @@ def check_url(dataframe):
         except:
             print(f"{url} is not good!")
             index_of_bad_urls.append(index)
-            print(index_of_bad_urls)
-    # try:
-    #     request.urlopen(dataframe['image-src'][408])
-    # except:
-    #     index_of_bad_urls.append(408)
-    #     print(index_of_bad_urls)
+            # print(index_of_bad_urls)
     dataframe.drop(index_of_bad_urls, inplace=True)
     dataframe.reset_index(drop=True, inplace=True)
     dataframe.to_csv(join(cfg.intermediate_data_path,
@@ -81,8 +76,8 @@ def crawl_data_from_frame(dataframe=None):
 
 def crawl_data():
     dataframe = read_data()
-    # clean_dataframe = check_url(dataframe=dataframe)
-    # crawl_data_from_frame(dataframe=clean_dataframe)
+    clean_dataframe = check_url(dataframe=dataframe)
+    crawl_data_from_frame(dataframe=clean_dataframe)
 
 
 if __name__ == "__main__":
