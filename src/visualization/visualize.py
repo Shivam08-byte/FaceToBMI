@@ -55,4 +55,6 @@ def plot_sample(data_loader, model, target="bmi"):
 
 
 if __name__ == "__main__":
-    statistical_plot()
+    target = "bmi"
+    data = [1.2, 1.3, 1.5, 1.9, 1.1, 1.1, 1.3, 1.8, 1.6, 1.9]
+    statistical_plot(data=data, target=target

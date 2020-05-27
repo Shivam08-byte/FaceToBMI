@@ -56,11 +56,12 @@ def crop_faces(plot_images=False, max_images_to_plot=5):
             d = detected[0]
             x1, y1, x2, y2, w, h = d.left(), d.top(), d.right() + \
                 1, d.bottom() + 1, d.width(), d.height()
-            xw1 = int(x1 - cfg.margin * w)
-            yw1 = int(y1 - cfg.margin * h)
-            xw2 = int(x2 + cfg.margin * w)
-            yw2 = int(y2 + cfg.margin * h)
-            cropped_img = crop_image(np_img, xw1, yw1, xw2, yw2)
+            # xw1 = int(x1 - cfg.margin * w)
+            # yw1 = int(y1 - cfg.margin * h)
+            # xw2 = int(x2 + cfg.margin * w)
+            # yw2 = int(y2 + cfg.margin * h)
+            # cropped_img = crop_image(np_img, xw1, yw1, xw2, yw2)
+            cropped_img = crop_image(np_img, x1, y1, x2, y2)
             cropped_path_for_file = join(cfg.cropped_data_path, images_name)
             cv2.imwrite(cropped_path_for_file, cropped_img)
 

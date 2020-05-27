@@ -3,7 +3,6 @@ from glob import glob
 from os.path import join, exists
 from os import makedirs
 import pandas as pd
-from preprocess import crop_faces
 import urllib.request as request
 
 
@@ -84,7 +83,6 @@ def crawl_data():
     dataframe = read_data()
     # clean_dataframe = check_url(dataframe=dataframe)
     # crawl_data_from_frame(dataframe=clean_dataframe)
-    # crop_faces()
 
 
 if __name__ == "__main__":
