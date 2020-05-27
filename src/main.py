@@ -6,11 +6,11 @@ from visualization.visualize import statistical_plot
 
 if __name__ == '__main__':
     crawl_data()
-    train_loader, valid_loader, test_loader = train_val_test_split()
-    model = get_model()
-    target = "bmi"
-    train_model(train_loader=train_loader, valid_loader=valid_loader,
-                model=model, target=target)
-    test_model(test_loader=test_loader, model=model, target=target)
-    data = [1.2, 1.3, 1.5, 1.9, 1.1, 1.1, 1.3, 1.8, 1.6, 1.9]
-    statistical_plot(data=data, target=target)
+    # train_loader, valid_loader, test_loader = train_val_test_split()
+    # model = get_model()
+    # target = "bmi"
+    # train_model(train_loader=train_loader, valid_loader=valid_loader,
+    #             model=model, target=target)
+    # test_model(test_loader=test_loader, model=model, target=target)
+    # data = [1.2, 1.3, 1.5, 1.9, 1.1, 1.1, 1.3, 1.8, 1.6, 1.9]
+    # statistical_plot(data=data, target=target)
