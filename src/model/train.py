@@ -26,7 +26,7 @@ def get_test_criterion():
     return test_criterion
 
 
-def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=cfg.epochs, target="bmi"):
+def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=cfg.epochs, target="bmi", type="west"):
     criterion = get_criterion()
 
     if train_on_gpu:
@@ -103,7 +103,7 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
             if valid_loss <= valid_loss_min:
                 print('\t\tEpoch: {}/{}\tValidation loss decreased ({:.6f} --> {:.6f})\tSaving model'.format(
                     epoch+1, epochs, valid_loss_min, valid_loss))
-                file_name = target + '_best_model.pt'
+                file_name = target + '_' + type + '_best_model.pt'
                 file_address = join(cfg.trained_model_path, file_name)
                 torch.save(model.state_dict(), file_address)
                 valid_loss_min = valid_loss
@@ -118,10 +118,11 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
     plt.close(fig)
 
 
-def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, target="bmi"):
-    file_name = target + '_best_model.pt'
+def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, target="bmi", type="west"):
+    device = torch.device("cuda") if is_cuda else torch.device('cpu')
+    file_name = target + '_' + type + '_best_model.pt'
     file_address = join(cfg.trained_model_path, file_name)
-    model.load_state_dict(torch.load(file_address))
+    model.load_state_dict(torch.load(file_address, map_location=device))
     test_criterion = get_test_criterion()
 
     if train_on_gpu:
@@ -156,10 +157,10 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
 
     # average test loss
     test_loss = test_loss/len(test_loader.sampler)
-    print(f"\tTesting loss: {test_loss:.3f}")
+    print(f"\tTesting loss with {type} data is: {test_loss:.3f}")
 
     if plot_sample:
-        print("\tExport sampling images")
+        print("\tExport sampling images\n")
         images, height, weight, bmi = next(iter(test_loader))
         if train_on_gpu:
             predictions = model(images.cuda())
@@ -180,7 +181,7 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
             elif target == "weight":
                 ax.set_title("Predicted:{:.2f}/ Actual: {:.2f}".format(predictions[idx, :].item(), weight[idx, :].item(
                 )), color=("green" if predictions[idx, :].item() == weight[idx, :].item() else "red"))
-        file_name = target + "_test_sample.png"
+        file_name = target + "_" + type + "_test_sample.png"
         figure_path = join(cfg.visualization_path, file_name)
         fig.savefig(figure_path)
         plt.close(fig)

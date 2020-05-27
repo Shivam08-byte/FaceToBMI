@@ -32,7 +32,7 @@ def statistical_plot(data=[], target="bmi"):
 
 
 def plot_sample(data_loader, model, target="bmi"):
-    device = torch.device('cpu')
+    device = torch.device("cuda") if is_cuda else torch.device('cpu')
     file_name = target + '_best_model.pt'
     file_address = join(cfg.trained_model_path, file_name)
     model.load_state_dict(torch.load(file_address, map_location=device))
@@ -55,4 +55,6 @@ def plot_sample(data_loader, model, target="bmi"):
 
 
 if __name__ == "__main__":
-    statistical_plot()
+    target = "bmi"
+    data = [1.2, 1.3, 1.5, 1.9, 1.1, 1.1, 1.3, 1.8, 1.6, 1.9]
+    statistical_plot(data=data, target=target)
