@@ -43,7 +43,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0041.jpg,1.62,52.0,19.81405273586343
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0042.jpg,1.64,50.0,18.590124925639504
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0043.jpg,1.72,47.0,15.886965927528395
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0044.jpg,1.78,82.0,25.88057063502083
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0045.jpg,1.71,54.0,18.467220683287167
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0046.jpg,1.75,80.0,26.122448979591837
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0047.jpg,1.8,77.0,23.76543209876543
@@ -195,7 +194,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0193.jpg,1.66,47.0,17.056176513282043
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0194.jpg,1.6,46.0,17.968749999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0195.jpg,1.88,82.0,23.20054323223178
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0196.jpg,1.64,45.0,16.731112433075552
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0197.jpg,1.77,66.0,21.06674327300584
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0198.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0199.jpg,1.73,67.0,22.386314277122523
@@ -282,7 +280,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0280.jpg,1.82,72.0,21.736505252988767
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0281.jpg,1.64,43.0,15.987507436049974
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0282.jpg,1.81,70.0,21.36686914318855
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0283.jpg,1.68,47.0,16.65249433106576
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0284.jpg,1.8,66.0,20.37037037037037
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0285.jpg,1.66,56.0,20.322252866889244
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0286.jpg,1.66,46.0,16.693279140659023
@@ -298,7 +295,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0296.jpg,1.78,74.0,23.355636914530994
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0297.jpg,1.65,45.0,16.528925619834713
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0298.jpg,1.82,70.0,21.132713440405748
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0299.jpg,1.76,58.0,18.72417355371901
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0300.jpg,1.8,70.0,21.604938271604937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0301.jpg,1.69,54.0,18.906901018871892
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0302.jpg,1.72,47.0,15.886965927528395
@@ -308,7 +304,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0306.jpg,1.72,66.0,22.30935640886966
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0307.jpg,1.7,47.0,16.262975778546714
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0308.jpg,1.8,75.0,23.148148148148145
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0309.jpg,1.65,45.0,16.528925619834713
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0310.jpg,1.83,75.0,22.395413419331717
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0311.jpg,1.8,68.0,20.98765432098765
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0312.jpg,1.72,48.0,16.224986479177936
@@ -327,7 +322,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0325.jpg,1.81,75.0,22.89307408198773
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0326.jpg,1.75,65.0,21.224489795918366
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0327.jpg,1.63,42.0,15.807896420640597
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0328.jpg,1.68,46.0,16.298185941043087
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0329.jpg,1.79,65.0,20.286507911738084
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0330.jpg,1.75,66.0,21.551020408163264
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0331.jpg,1.68,53.0,18.77834467120182
@@ -634,7 +628,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0632.jpg,1.77,54.0,17.236426314277505
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0633.jpg,1.7,53.0,18.339100346020764
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0634.jpg,1.72,50.0,16.901027582477017
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0635.jpg,1.82,60.0,18.11375437749064
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0636.jpg,1.65,47.0,17.263544536271812
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0637.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0638.jpg,1.65,45.0,16.528925619834713
@@ -653,7 +646,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0651.jpg,1.65,45.0,16.528925619834713
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0652.jpg,1.87,73.0,20.875632703251448
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0653.jpg,1.63,45.0,16.937031879257784
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0654.jpg,1.72,52.0,17.577068685776098
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0655.jpg,1.79,78.0,24.343809494085704
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0656.jpg,1.82,76.0,22.944088878154812
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0657.jpg,1.66,47.0,17.056176513282043
@@ -689,7 +681,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0687.jpg,1.68,50.0,17.71541950113379
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0688.jpg,1.66,49.0,17.78197125852809
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0689.jpg,1.8,67.0,20.679012345679013
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0690.jpg,1.67,45.0,16.1353938828929
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0691.jpg,1.67,45.0,16.1353938828929
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0692.jpg,1.82,72.0,21.736505252988767
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0693.jpg,1.65,47.0,17.263544536271812
@@ -763,7 +754,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0761.jpg,1.83,70.0,20.902385858042937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0762.jpg,1.68,46.0,16.298185941043087
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0763.jpg,1.7,48.0,16.60899653979239
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0764.jpg,1.62,40.0,15.241579027587255
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0765.jpg,1.67,46.0,16.493958191401628
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0766.jpg,1.68,47.0,16.65249433106576
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0767.jpg,1.82,65.0,19.623233908948194
@@ -772,7 +762,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0770.jpg,1.82,70.0,21.132713440405748
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0771.jpg,1.66,55.0,19.959355494266223
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0772.jpg,1.66,49.0,17.78197125852809
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0773.jpg,1.8,67.0,20.679012345679013
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0774.jpg,1.63,43.0,16.184274906846326
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0775.jpg,1.67,47.0,16.85252249991036
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0776.jpg,1.7,47.0,16.262975778546714
@@ -896,7 +885,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0894.jpg,1.81,67.0,20.45114617990904
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0895.jpg,1.8,80.0,24.691358024691358
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0896.jpg,1.83,70.0,20.902385858042937
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0897.jpg,1.86,62.0,17.921146953405014
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0898.jpg,1.84,70.0,20.6758034026465
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0899.jpg,1.82,76.0,22.944088878154812
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0900.jpg,1.67,47.0,16.85252249991036
@@ -906,7 +894,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0904.jpg,1.8,65.0,20.061728395061728
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0905.jpg,1.7,50.0,17.301038062283737
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0906.jpg,1.63,44.0,16.560653393052053
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/0907.jpg,1.8,72.0,22.22222222222222
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0908.jpg,1.8,67.0,20.679012345679013
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0909.jpg,1.63,51.0,19.195302796492154
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/0910.jpg,1.67,45.0,16.1353938828929
@@ -1028,7 +1015,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1026.jpg,1.6,40.0,15.624999999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1027.jpg,1.77,58.0,18.513198633853616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1028.jpg,1.74,70.0,23.120623596247853
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1029.jpg,1.78,62.0,19.568236333796236
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1030.jpg,1.63,45.0,16.937031879257784
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1031.jpg,1.58,49.0,19.62826470116968
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1032.jpg,1.6,46.0,17.968749999999996
@@ -1078,7 +1064,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1076.jpg,1.65,56.0,20.569329660238754
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1077.jpg,1.68,54.0,19.13265306122449
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1078.jpg,1.81,62.0,18.924941241109856
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1079.jpg,1.65,44.0,16.161616161616163
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1080.jpg,1.66,78.0,28.305995064595734
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1081.jpg,1.58,48.0,19.227687870533565
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1082.jpg,1.78,56.0,17.67453604342886
@@ -1113,7 +1098,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1111.jpg,1.72,58.0,19.60519199567334
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1112.jpg,1.85,68.0,19.86851716581446
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1113.jpg,1.69,70.0,24.508945765204302
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1114.jpg,1.64,48.0,17.846519928613922
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1115.jpg,1.65,65.0,23.875114784205696
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1116.jpg,1.78,61.0,19.252619618735007
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1117.jpg,1.66,44.0,15.967484395412978
@@ -1126,7 +1110,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1124.jpg,1.61,43.0,16.58886617028664
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1125.jpg,1.76,57.0,18.401342975206614
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1126.jpg,1.7,66.0,22.837370242214536
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1127.jpg,1.72,62.0,20.9572742022715
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1128.jpg,1.73,74.0,24.725182932941294
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1129.jpg,1.7,62.0,21.453287197231838
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1130.jpg,1.76,68.0,21.952479338842977
@@ -1150,7 +1133,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1148.jpg,1.57,46.0,18.662014686194166
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1149.jpg,1.77,65.0,20.747550193111813
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1150.jpg,1.77,65.0,20.747550193111813
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1151.jpg,1.74,70.0,23.120623596247853
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1152.jpg,1.6,40.0,15.624999999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1153.jpg,1.83,70.0,20.902385858042937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1154.jpg,1.76,63.0,20.33832644628099
@@ -1159,7 +1141,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1157.jpg,1.76,60.0,19.369834710743802
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1158.jpg,1.82,60.0,18.11375437749064
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1159.jpg,1.8,58.0,17.901234567901234
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1160.jpg,1.77,59.0,18.832391713747644
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1161.jpg,1.56,43.0,17.66929651545036
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1162.jpg,1.665,54.0,19.478938397857316
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1163.jpg,1.64,49.0,18.218322427126715
@@ -1222,7 +1203,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1220.jpg,1.59,40.0,15.822158933586486
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1221.jpg,1.7,58.0,20.06920415224914
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1222.jpg,1.8,63.0,19.444444444444443
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1223.jpg,1.69,46.0,16.105878645705683
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1224.jpg,1.72,53.0,17.915089237425637
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1225.jpg,1.53,40.0,17.087444999786406
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1226.jpg,1.84,70.0,20.6758034026465
@@ -1270,7 +1250,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1268.jpg,1.84,62.0,18.312854442344044
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1269.jpg,1.61,53.0,20.446742023841672
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1270.jpg,1.6,44.0,17.187499999999996
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1271.jpg,1.8,70.0,21.604938271604937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1272.jpg,1.72,55.0,18.591130340724717
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1273.jpg,1.55,41.0,17.065556711758582
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1274.jpg,1.65,50.0,18.36547291092746
@@ -1288,7 +1267,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1286.jpg,1.77,63.0,20.109164033323754
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1287.jpg,1.76,49.0,15.81869834710744
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1288.jpg,1.83,63.0,18.812147272238644
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1289.jpg,1.82,74.0,22.34029706557179
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1290.jpg,1.79,65.0,20.286507911738084
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1291.jpg,1.56,42.0,17.258382642998026
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1292.jpg,1.63,48.0,18.06616733787497
@@ -1306,7 +1284,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1304.jpg,1.6,70.0,27.343749999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1305.jpg,1.83,70.0,20.902385858042937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1306.jpg,1.58,41.0,16.423650056080753
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1307.jpg,1.7,64.0,22.145328719723185
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1308.jpg,1.71,60.0,20.519134092541297
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1309.jpg,1.66,42.0,15.241689650166935
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1310.jpg,1.71,48.0,16.415307274033037
@@ -1337,7 +1314,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1335.jpg,1.85,67.0,19.576333089846603
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1336.jpg,1.515,38.0,16.55611105665022
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1337.jpg,1.74,77.0,25.43268595587264
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1338.jpg,1.81,47.0,14.346326424712311
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1339.jpg,1.63,63.0,23.711844630960897
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1340.jpg,1.57,53.0,21.50188648626719
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1341.jpg,1.57,43.0,17.444926771877153
@@ -1365,7 +1341,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1363.jpg,1.7,53.0,18.339100346020764
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1364.jpg,1.7,63.0,21.79930795847751
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1365.jpg,1.6,51.0,19.921874999999996
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1366.jpg,1.72,65.0,21.971335857220122
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1367.jpg,1.62,43.0,16.384697454656298
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1368.jpg,1.67,61.0,21.872422819032593
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1369.jpg,1.68,63.0,22.321428571428577
@@ -1450,7 +1425,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1448.jpg,1.91,81.0,22.20333872426743
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1449.jpg,1.7,46.0,15.91695501730104
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1450.jpg,1.65,58.0,21.30394857667585
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1451.jpg,1.66,58.0,21.04804761213529
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1452.jpg,1.73,63.0,21.04981790236894
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1453.jpg,1.64,48.0,17.846519928613922
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1454.jpg,1.7,62.0,21.453287197231838
@@ -1486,7 +1460,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1484.jpg,1.64,49.0,18.218322427126715
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1485.jpg,1.63,43.0,16.184274906846326
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1486.jpg,1.79,58.0,18.101807059704754
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1487.jpg,1.71,71.0,24.280975342840534
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1488.jpg,1.58,46.0,18.426534209261334
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1489.jpg,1.7,55.0,19.031141868512112
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1490.jpg,1.74,57.0,18.826793499801823
@@ -1508,13 +1481,11 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1506.jpg,1.68,47.0,16.65249433106576
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1507.jpg,1.55,45.0,18.730489073881373
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1508.jpg,1.57,43.0,17.444926771877153
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1509.jpg,1.74,57.0,18.826793499801823
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1510.jpg,1.68,43.0,15.235260770975058
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1511.jpg,1.59,42.0,16.61326688026581
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1512.jpg,1.74,63.0,20.808561236623067
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1513.jpg,1.7,55.0,19.031141868512112
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1514.jpg,1.72,60.0,20.281233098972418
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1515.jpg,1.55,44.0,18.314255983350673
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1516.jpg,1.68,43.0,15.235260770975058
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1517.jpg,1.8,65.0,20.061728395061728
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1518.jpg,1.67,48.0,17.21108680841909
@@ -1538,7 +1509,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1536.jpg,1.82,67.0,20.227025721531216
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1537.jpg,1.65,46.0,16.896235078053262
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1538.jpg,1.86,70.0,20.23355301190889
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1539.jpg,1.78,65.0,20.515086478979924
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1540.jpg,1.63,45.0,16.937031879257784
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1541.jpg,1.63,46.0,17.31341036546351
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1542.jpg,1.72,57.0,19.2671714440238
@@ -1556,11 +1526,9 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1554.jpg,1.67,60.0,21.513858510523864
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1555.jpg,1.7,59.0,20.41522491349481
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1556.jpg,1.68,48.0,17.006802721088437
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1557.jpg,1.74,63.0,20.808561236623067
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1558.jpg,1.71,63.0,21.545090797168363
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1559.jpg,1.64,55.0,20.449137418203453
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1560.jpg,1.6,42.0,16.406249999999996
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1561.jpg,1.73,52.0,17.374452871796585
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1562.jpg,1.78,64.0,20.199469763918696
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1563.jpg,1.78,58.0,18.30576947355132
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1564.jpg,1.77,62.0,19.789970953429727
@@ -1572,9 +1540,7 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1570.jpg,1.85,68.0,19.86851716581446
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1571.jpg,1.77,71.0,22.66270867247598
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1572.jpg,1.77,60.0,19.15158479364167
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1573.jpg,1.83,63.0,18.812147272238644
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1574.jpg,1.77,60.0,19.15158479364167
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1575.jpg,1.75,62.0,20.244897959183675
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1576.jpg,1.64,42.0,15.615704937537183
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1577.jpg,1.72,52.0,17.577068685776098
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1578.jpg,1.7,47.0,16.262975778546714
@@ -1621,14 +1587,12 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1619.jpg,1.67,45.0,16.1353938828929
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1620.jpg,1.81,74.0,22.587833094227893
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1621.jpg,1.605,78.0,30.27920924680467
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1622.jpg,1.65,63.0,23.140495867768596
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1623.jpg,1.75,68.0,22.20408163265306
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1624.jpg,1.51,48.0,21.051708258409718
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1625.jpg,1.83,68.0,20.305174833527424
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1626.jpg,1.63,65.0,24.46460160337235
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1627.jpg,1.77,64.0,20.428357113217785
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1628.jpg,1.68,55.0,19.48696145124717
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1629.jpg,1.62,44.0,16.76573693034598
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1630.jpg,1.75,56.0,18.285714285714285
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1631.jpg,1.72,74.0,25.013520822065985
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1632.jpg,1.83,73.0,21.798202394816204
@@ -1636,7 +1600,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1634.jpg,1.62,45.0,17.146776406035663
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1635.jpg,1.57,48.0,19.473406629072173
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1636.jpg,1.8,62.0,19.1358024691358
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1637.jpg,1.55,44.0,18.314255983350673
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1638.jpg,1.77,62.0,19.789970953429727
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1639.jpg,1.69,49.0,17.15626203564301
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1640.jpg,1.68,38.0,13.46371882086168
@@ -1669,7 +1632,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1667.jpg,1.78,53.0,16.72768589824517
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1668.jpg,1.67,64.0,22.948115744558788
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1669.jpg,1.77,68.0,21.705129432793896
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1670.jpg,1.7,55.0,19.031141868512112
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1671.jpg,1.77,62.0,19.789970953429727
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1672.jpg,1.86,73.0,21.10070528384784
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1673.jpg,1.31,26.0,15.15063224753802
@@ -1735,7 +1697,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1733.jpg,1.84,65.0,19.198960302457465
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1734.jpg,1.78,65.0,20.515086478979924
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1735.jpg,1.65,47.0,17.263544536271812
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1736.jpg,1.63,47.0,17.68978885166924
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1737.jpg,1.78,64.0,20.199469763918696
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1738.jpg,1.81,68.0,20.756387167668876
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1739.jpg,1.6,46.0,17.968749999999996
@@ -1761,14 +1722,12 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1759.jpg,1.65,48.0,17.63085399449036
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1760.jpg,1.62,52.0,19.81405273586343
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1761.jpg,1.78,60.0,18.93700290367378
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1762.jpg,1.8,66.0,20.37037037037037
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1763.jpg,1.74,75.0,24.772096710265558
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1764.jpg,1.76,60.0,19.369834710743802
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1765.jpg,1.78,70.0,22.093170054286073
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1766.jpg,1.6,47.0,18.359374999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1767.jpg,1.75,71.0,23.183673469387756
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1768.jpg,1.53,34.0,14.524328249818446
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1769.jpg,1.82,68.0,20.528921627822726
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1770.jpg,1.73,55.0,18.376825152861773
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1771.jpg,1.7,58.0,20.06920415224914
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1772.jpg,1.63,46.0,17.31341036546351
@@ -1812,13 +1771,11 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1810.jpg,1.59,44.0,17.404374826945133
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1811.jpg,1.68,61.0,21.612811791383223
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1812.jpg,1.84,70.0,20.6758034026465
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1813.jpg,1.67,57.0,20.43816558499767
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1814.jpg,1.56,34.0,13.971071663379355
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1815.jpg,1.6,42.0,16.406249999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1816.jpg,1.62,45.0,17.146776406035663
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1817.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1818.jpg,1.61,41.0,15.817290999575631
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1819.jpg,1.73,64.0,21.383941996057334
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1820.jpg,1.55,42.0,17.48178980228928
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1821.jpg,1.72,53.0,17.915089237425637
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1822.jpg,1.72,70.0,23.661438615467823
@@ -1826,7 +1783,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1824.jpg,1.5859999999999999,57.5,22.859223756418476
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1825.jpg,1.57,43.0,17.444926771877153
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1826.jpg,1.7,47.0,16.262975778546714
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1827.jpg,1.59,47.0,18.59103674696412
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1828.jpg,1.7,70.0,24.221453287197235
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1829.jpg,1.75,78.0,25.46938775510204
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1830.jpg,1.6,44.0,17.187499999999996
@@ -1839,7 +1795,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1837.jpg,1.85,75.0,21.913805697589478
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1838.jpg,1.75,60.0,19.591836734693878
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1839.jpg,1.66,66.0,23.95122659311947
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1840.jpg,1.62,47.0,17.908855357415025
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1841.jpg,1.63,50.0,18.818924310286427
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1842.jpg,1.62,45.0,17.146776406035663
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1843.jpg,1.67,51.0,18.286779733945284
@@ -1858,7 +1813,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1856.jpg,1.56,40.0,16.43655489809336
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1857.jpg,1.7,48.0,16.60899653979239
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1858.jpg,1.68,70.0,24.801587301587304
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1859.jpg,1.75,60.0,19.591836734693878
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1860.jpg,1.73,71.0,23.722810651876106
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1861.jpg,1.83,71.0,21.20099137030069
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1862.jpg,1.66,43.0,15.604587022789955
@@ -1897,7 +1851,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1895.jpg,1.8,61.0,18.827160493827158
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1896.jpg,1.7,65.0,22.49134948096886
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1897.jpg,1.56,50.0,20.5456936226167
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1898.jpg,1.63,45.0,16.937031879257784
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1899.jpg,1.58,45.0,18.02595737862522
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1900.jpg,1.85,103.0,30.094959824689553
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1901.jpg,1.58,40.0,16.023073225444637
@@ -1947,11 +1900,9 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1945.jpg,1.63,45.0,16.937031879257784
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1946.jpg,1.8,63.0,19.444444444444443
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1947.jpg,1.63,43.0,16.184274906846326
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1948.jpg,1.77,65.0,20.747550193111813
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1949.jpg,1.77,60.0,19.15158479364167
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1950.jpg,1.65,48.0,17.63085399449036
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1951.jpg,1.72,58.0,19.60519199567334
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/1952.jpg,1.6,44.0,17.187499999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1953.jpg,1.67,46.0,16.493958191401628
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1954.jpg,1.8,68.0,20.98765432098765
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/1955.jpg,1.78,66.0,20.830703194041156
@@ -2082,16 +2033,13 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2080.jpg,1.8,72.0,22.22222222222222
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2081.jpg,1.86,80.0,23.12406058503873
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2082.jpg,1.52,40.0,17.31301939058172
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2083.jpg,1.8,72.0,22.22222222222222
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2084.jpg,1.63,45.0,16.937031879257784
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2085.jpg,1.69,47.0,16.45600644235146
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2086.jpg,1.78,72.0,22.724403484408533
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2087.jpg,1.6,44.0,17.187499999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2088.jpg,1.82,69.0,20.830817534114235
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2089.jpg,1.65,46.0,16.896235078053262
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2090.jpg,1.62,42.0,16.00365797896662
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2091.jpg,1.62,49.0,18.670934308794386
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2092.jpg,1.68,49.0,17.361111111111114
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2093.jpg,1.7,50.0,17.301038062283737
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2094.jpg,1.52,38.0,16.44736842105263
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2095.jpg,1.76,71.0,22.920971074380166
@@ -2109,7 +2057,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2107.jpg,1.81,74.0,22.587833094227893
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2108.jpg,1.58,58.0,23.233456176894723
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2109.jpg,1.8,73.0,22.530864197530864
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2110.jpg,1.8,64.0,19.753086419753085
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2111.jpg,1.78,58.0,18.30576947355132
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2112.jpg,1.72,65.0,21.971335857220122
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2113.jpg,1.67,44.0,15.776829574384166
@@ -2152,7 +2099,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2150.jpg,1.7,55.0,19.031141868512112
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2151.jpg,1.82,75.0,22.6421929718633
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2152.jpg,1.81,70.0,21.36686914318855
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2153.jpg,1.73,46.0,15.36970830966621
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2154.jpg,1.68,45.0,15.94387755102041
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2155.jpg,1.83,65.0,19.409358296754156
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2156.jpg,1.81,78.0,23.808797045267237
@@ -2322,7 +2268,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2320.jpg,1.65,45.0,16.528925619834713
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2321.jpg,1.59,47.0,18.59103674696412
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2322.jpg,1.68,45.0,15.94387755102041
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2323.jpg,1.6,43.0,16.796874999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2324.jpg,1.64,47.0,17.474717430101133
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2325.jpg,1.71,60.0,20.519134092541297
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2326.jpg,1.81,72.0,21.97735111870822
@@ -2397,12 +2342,10 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2395.jpg,1.85,69.0,20.16070124178232
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2396.jpg,1.75,66.0,21.551020408163264
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2397.jpg,1.65,44.0,16.161616161616163
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2398.jpg,1.78,58.0,18.30576947355132
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2399.jpg,1.8,65.0,20.061728395061728
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2400.jpg,1.8,75.0,23.148148148148145
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2401.jpg,1.77,69.0,22.024322512687924
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2402.jpg,1.69,50.0,17.506389832288786
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2403.jpg,1.86,68.0,19.65545149728292
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2404.jpg,1.7,49.0,16.955017301038065
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2405.jpg,1.67,48.0,17.21108680841909
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2406.jpg,1.7,49.0,16.955017301038065
@@ -2425,7 +2368,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2423.jpg,1.83,70.0,20.902385858042937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2424.jpg,1.6,63.0,24.609374999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2425.jpg,1.68,49.0,17.361111111111114
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2426.jpg,1.69,48.0,16.806134238997235
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2427.jpg,1.85,77.0,22.498173849525198
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2428.jpg,1.61,45.0,17.360441340997646
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2429.jpg,1.8,71.0,21.91358024691358
@@ -2465,7 +2407,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2463.jpg,1.74,54.0,17.8359096313912
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2464.jpg,1.63,57.0,21.453573713726524
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2465.jpg,1.85,76.0,22.205989773557338
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2466.jpg,1.8,68.0,20.98765432098765
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2467.jpg,1.83,75.0,22.395413419331717
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2468.jpg,1.72,62.0,20.9572742022715
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2469.jpg,1.8,110.0,33.95061728395061
@@ -2511,7 +2452,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2509.jpg,1.81,73.0,22.282592106468055
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2510.jpg,1.65,43.0,15.794306703397615
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2511.jpg,1.67,48.0,17.21108680841909
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2512.jpg,1.81,70.0,21.36686914318855
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2513.jpg,1.78,54.0,17.043302613306402
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2514.jpg,1.76,78.0,25.180785123966942
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2515.jpg,1.68,48.0,17.006802721088437
@@ -2585,7 +2525,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2583.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2584.jpg,1.79,68.0,21.22280827689523
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2585.jpg,1.68,66.0,23.384353741496604
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2586.jpg,1.7,48.0,16.60899653979239
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2587.jpg,1.77,72.0,22.981901752370007
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2588.jpg,1.77,66.0,21.06674327300584
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2589.jpg,1.73,58.0,19.37919743392696
@@ -2609,7 +2548,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2607.jpg,1.67,48.0,17.21108680841909
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2608.jpg,1.79,63.0,19.66230766829999
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2609.jpg,1.8,71.0,21.91358024691358
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2610.jpg,1.77,65.0,20.747550193111813
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2611.jpg,1.65,43.0,15.794306703397615
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2612.jpg,1.85,76.0,22.205989773557338
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2613.jpg,1.85,75.0,21.913805697589478
@@ -2649,7 +2587,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2647.jpg,1.63,47.0,17.68978885166924
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2648.jpg,1.78,63.0,19.883853048857468
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2649.jpg,1.95,110.0,28.928336620644316
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2650.jpg,1.73,56.0,18.710949246550168
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2651.jpg,1.83,73.0,21.798202394816204
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2652.jpg,1.65,48.0,17.63085399449036
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2653.jpg,1.76,82.0,26.47210743801653
@@ -2737,7 +2674,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2735.jpg,1.81,70.0,21.36686914318855
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2736.jpg,1.73,67.0,22.386314277122523
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2737.jpg,1.74,56.0,18.49649887699828
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2738.jpg,1.55,43.0,17.898022892819977
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2739.jpg,1.65,47.0,17.263544536271812
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2740.jpg,1.65,45.0,16.528925619834713
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2741.jpg,1.64,45.0,16.731112433075552
@@ -2829,7 +2765,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2827.jpg,1.8,70.0,21.604938271604937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2828.jpg,1.71,60.0,20.519134092541297
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2829.jpg,1.6,46.0,17.968749999999996
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2830.jpg,1.7,75.0,25.95155709342561
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2831.jpg,1.84,75.0,22.152646502835537
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2832.jpg,1.65,44.0,16.161616161616163
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2833.jpg,1.62,40.0,15.241579027587255
@@ -2884,7 +2819,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2882.jpg,1.8,77.0,23.76543209876543
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2883.jpg,1.57,52.0,21.096190514828187
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2884.jpg,1.66,47.0,17.056176513282043
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2885.jpg,1.75,60.0,19.591836734693878
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2886.jpg,1.8,68.0,20.98765432098765
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2887.jpg,1.67,45.0,16.1353938828929
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2888.jpg,1.87,68.0,19.445794846864363
@@ -2910,7 +2844,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2908.jpg,1.69,54.0,18.906901018871892
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2909.jpg,1.63,40.0,15.05513944822914
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2910.jpg,1.81,65.0,19.840664204389366
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2911.jpg,1.78,64.0,20.199469763918696
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2912.jpg,1.82,77.0,23.24598478444632
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2913.jpg,1.76,58.0,18.72417355371901
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2914.jpg,1.76,70.0,22.59814049586777
@@ -2960,7 +2893,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2958.jpg,1.682,48.0,16.966382526888182
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2959.jpg,1.82,80.0,24.151672503320853
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2960.jpg,1.69,49.0,17.15626203564301
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2961.jpg,1.67,47.0,16.85252249991036
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2962.jpg,1.62,43.0,16.384697454656298
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2963.jpg,1.81,68.0,20.756387167668876
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2964.jpg,1.82,70.0,21.132713440405748
@@ -2986,7 +2918,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2984.jpg,1.68,46.0,16.298185941043087
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2985.jpg,1.65,46.0,16.896235078053262
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2986.jpg,1.76,68.0,21.952479338842977
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/2987.jpg,1.63,45.0,16.937031879257784
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2988.jpg,1.89,73.0,20.43615800229557
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2989.jpg,1.83,73.0,21.798202394816204
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/2990.jpg,1.73,70.0,23.38868655818771
@@ -3143,7 +3074,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3141.jpg,1.67,48.0,17.21108680841909
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3142.jpg,1.79,70.0,21.847008520333322
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3143.jpg,1.86,67.0,19.366400739969936
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3144.jpg,1.74,65.0,21.469150482230148
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3145.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3146.jpg,1.88,83.0,23.48347668628339
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3147.jpg,1.83,82.0,24.48565200513601
@@ -3203,7 +3133,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3201.jpg,1.82,76.0,22.944088878154812
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3202.jpg,1.71,52.0,17.783249546869126
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3203.jpg,1.73,59.0,19.713321527615356
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3204.jpg,1.67,48.0,17.21108680841909
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3205.jpg,1.8,68.0,20.98765432098765
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3206.jpg,1.7,48.0,16.60899653979239
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3207.jpg,1.74,68.0,22.460034350640772
@@ -3235,7 +3164,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3233.jpg,1.79,70.0,21.847008520333322
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3234.jpg,1.75,65.0,21.224489795918366
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3235.jpg,1.78,72.0,22.724403484408533
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3236.jpg,1.78,65.0,20.515086478979924
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3237.jpg,1.66,44.0,15.967484395412978
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3238.jpg,1.64,45.0,16.731112433075552
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3239.jpg,1.84,70.0,20.6758034026465
@@ -3253,7 +3181,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3251.jpg,1.85,75.0,21.913805697589478
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3252.jpg,1.68,47.0,16.65249433106576
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3253.jpg,1.65,46.0,16.896235078053262
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3254.jpg,1.68,45.0,15.94387755102041
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3255.jpg,1.84,72.0,21.266540642722116
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3256.jpg,1.66,43.0,15.604587022789955
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3257.jpg,1.73,63.0,21.04981790236894
@@ -3277,7 +3204,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3275.jpg,1.7,52.0,17.99307958477509
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3276.jpg,1.75,65.0,21.224489795918366
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3277.jpg,1.87,72.0,20.58966513197403
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3278.jpg,1.72,61.0,20.61925365062196
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3279.jpg,1.65,53.0,19.467401285583104
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3280.jpg,1.76,51.0,16.464359504132233
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3281.jpg,1.68,45.0,15.94387755102041
@@ -3316,7 +3242,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3314.jpg,1.74,74.0,24.441802087462015
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3315.jpg,1.65,43.0,15.794306703397615
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3316.jpg,1.77,69.0,22.024322512687924
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3317.jpg,1.72,60.0,20.281233098972418
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3318.jpg,1.83,78.0,23.291229956104985
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3319.jpg,1.77,67.0,21.38593635289987
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3320.jpg,1.65,47.0,17.263544536271812
@@ -3331,7 +3256,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3329.jpg,1.7,46.0,15.91695501730104
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3330.jpg,1.83,63.0,18.812147272238644
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3331.jpg,1.72,60.0,20.281233098972418
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3332.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3333.jpg,1.8,65.0,20.061728395061728
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3334.jpg,1.78,95.0,29.983587930816814
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3335.jpg,1.68,48.0,17.006802721088437
@@ -3398,7 +3322,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3396.jpg,1.6,43.0,16.796874999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3397.jpg,1.76,58.0,18.72417355371901
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3398.jpg,1.68,48.0,17.006802721088437
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3399.jpg,1.73,51.0,17.04032877810819
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3400.jpg,1.63,43.0,16.184274906846326
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3401.jpg,1.76,72.0,23.243801652892564
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3402.jpg,1.78,77.0,24.302487059714682
@@ -3489,7 +3412,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3487.jpg,1.8,69.0,21.296296296296294
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3488.jpg,1.67,46.0,16.493958191401628
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3489.jpg,1.68,47.0,16.65249433106576
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3490.jpg,1.8,63.0,19.444444444444443
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3491.jpg,1.81,68.0,20.756387167668876
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3492.jpg,1.64,43.0,15.987507436049974
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3493.jpg,1.73,68.0,22.720438370810918
@@ -3546,7 +3468,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3544.jpg,1.74,69.0,22.79032897344431
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3545.jpg,1.6,46.0,17.968749999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3546.jpg,1.66,44.0,15.967484395412978
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3547.jpg,1.7,85.0,29.411764705882355
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3548.jpg,1.62,45.0,17.146776406035663
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3549.jpg,1.6,45.0,17.578124999999996
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3550.jpg,1.62,82.0,31.24523700655387
@@ -3576,7 +3497,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3574.jpg,1.69,48.0,16.806134238997235
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3575.jpg,1.61,44.0,16.97465375564214
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3576.jpg,1.82,68.0,20.528921627822726
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3577.jpg,1.73,61.0,20.381569714992146
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3578.jpg,1.8,85.0,26.234567901234566
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3579.jpg,1.7,48.0,16.60899653979239
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3580.jpg,1.68,48.0,17.006802721088437
@@ -3589,7 +3509,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3587.jpg,1.8,75.0,23.148148148148145
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3588.jpg,1.65,41.0,15.059687786960517
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3589.jpg,1.74,63.0,20.808561236623067
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3590.jpg,1.74,70.0,23.120623596247853
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3591.jpg,1.65,47.0,17.263544536271812
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3592.jpg,1.78,65.0,20.515086478979924
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3593.jpg,1.78,66.0,20.830703194041156
@@ -3646,7 +3565,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3644.jpg,1.74,68.0,22.460034350640772
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3645.jpg,1.64,49.0,18.218322427126715
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3646.jpg,1.86,83.0,23.991212856977683
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3647.jpg,1.84,65.0,19.198960302457465
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3648.jpg,1.72,62.0,20.9572742022715
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3649.jpg,1.8,70.0,21.604938271604937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3650.jpg,1.71,46.0,15.731336137614994
@@ -3853,7 +3771,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3851.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3852.jpg,1.66,45.0,16.330381768036002
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3853.jpg,1.69,49.0,17.15626203564301
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3854.jpg,1.64,45.0,16.731112433075552
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3855.jpg,1.72,61.0,20.61925365062196
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3856.jpg,1.7,75.0,25.95155709342561
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3857.jpg,1.68,49.0,17.361111111111114
@@ -3862,7 +3779,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3860.jpg,1.73,50.0,16.70620468441979
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3861.jpg,1.69,49.0,17.15626203564301
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3862.jpg,1.72,60.0,20.281233098972418
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3863.jpg,1.76,60.0,19.369834710743802
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3864.jpg,1.69,48.0,16.806134238997235
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3865.jpg,1.8,70.0,21.604938271604937
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3866.jpg,1.75,64.0,20.897959183673468
@@ -3871,7 +3787,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3869.jpg,1.73,70.0,23.38868655818771
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3870.jpg,1.64,46.0,17.102914931588344
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3871.jpg,1.7,50.0,17.301038062283737
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3872.jpg,1.8,60.0,18.51851851851852
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3873.jpg,1.75,68.0,22.20408163265306
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3874.jpg,1.68,48.0,17.006802721088437
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3875.jpg,1.75,64.0,20.897959183673468
@@ -3890,7 +3805,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3888.jpg,1.68,70.0,24.801587301587304
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3889.jpg,1.78,71.0,22.408786769347305
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3890.jpg,1.58,43.0,17.224803717352987
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3891.jpg,1.73,50.0,16.70620468441979
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3892.jpg,1.58,41.0,16.423650056080753
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3893.jpg,1.67,45.0,16.1353938828929
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3894.jpg,1.58,41.0,16.423650056080753
@@ -3920,7 +3834,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3918.jpg,1.84,78.0,23.03875236294896
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3919.jpg,1.7,60.0,20.761245674740486
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3920.jpg,1.77,70.0,22.34351559258195
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/3921.jpg,1.87,70.0,20.0177299894192
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3922.jpg,1.78,68.0,21.461936624163616
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3923.jpg,1.8,63.0,19.444444444444443
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/3924.jpg,1.83,75.0,22.395413419331717
@@ -4013,7 +3926,6 @@ Path,height,weight,BMI
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/4011.jpg,1.8,68.0,20.98765432098765
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/4012.jpg,1.8,117.0,36.11111111111111
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/4013.jpg,1.82,70.0,21.132713440405748
-/Users/casey/Downloads/FaceToBMI/data/test_data/images/4014.jpg,1.86,72.0,20.811654526534856
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/4015.jpg,1.67,47.0,16.85252249991036
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/4016.jpg,1.81,68.0,20.756387167668876
 /Users/casey/Downloads/FaceToBMI/data/test_data/images/4017.jpg,1.62,45.0,17.146776406035663

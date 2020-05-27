@@ -81,7 +81,7 @@ def crawl_data_from_frame(dataframe=None):
 
 
 def crawl_data():
-    # dataframe = read_data()
+    dataframe = read_data()
     # clean_dataframe = check_url(dataframe=dataframe)
     # crawl_data_from_frame(dataframe=clean_dataframe)
     # crop_faces()
