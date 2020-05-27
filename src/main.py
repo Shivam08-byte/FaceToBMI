@@ -3,6 +3,7 @@ from model.train import train_model, test_model
 from data.data import train_val_test_split
 from data.scrape import crawl_data
 from visualization.visualize import statistical_plot
+from data.preprocess import crop_faces
 
 if __name__ == '__main__':
     crawl_data()
