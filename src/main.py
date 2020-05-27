@@ -9,11 +9,11 @@ if __name__ == '__main__':
     target = "bmi"
     # crawl_data()
     # crop_faces()
-    model = get_model()
-    _, _, western_test_loader = train_val_test_split(type="west")
+    # model = get_model()
+    # _, _, western_test_loader = train_val_test_split(type="west")
     # train_model(train_loader=train_loader, valid_loader=valid_loader, model=model, target=target)
-    test_model(test_loader=western_test_loader,
-               model=model, target=target, type="west")
-    _, _, asian_test_loader = train_val_test_split(type="test")
-    test_model(test_loader=asian_test_loader,
-               model=model, target=target, type="west")
+    # test_model(test_loader=western_test_loader,
+    #    model=model, target=target, type="west")
+    # _, _, asian_test_loader = train_val_test_split(type="test")
+    # test_model(test_loader=asian_test_loader,
+    #    model=model, target=target, type="west")
