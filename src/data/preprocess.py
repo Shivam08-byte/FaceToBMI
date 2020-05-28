@@ -27,6 +27,7 @@ def pad_img_to_fit_bbox(img, x1, x2, y1, y2):
 
 def crop_faces(plot_images=False, max_images_to_plot=5):
     bad_crop_count = 0
+    testing_size = 0
     cropped_annotation = join(cfg.test_data_path, "annotation.csv")
     if not exists(cfg.cropped_data_path):
         makedirs(cfg.cropped_data_path)
@@ -35,28 +36,38 @@ def crop_faces(plot_images=False, max_images_to_plot=5):
     detected_cropped_images = []
     original_images_detected = []
     for images_name in listdir(cfg.raw_test_data_path):
-        np_img = cv2.imread(join(cfg.raw_test_data_path, images_name))
-        detected = detector(np_img, 1)
-        img_h, img_w, _ = np.shape(np_img)
-        original_images_detected.append(np_img)
+        try:
+            np_img = cv2.imread(
+                join(cfg.raw_test_data_path, images_name), cv2.IMREAD_UNCHANGED)
+            assert np_img.ndim == 3
+        except Exception as e:
+            print(join(cfg.raw_test_data_path, images_name))
+            print("Oops!", e.__class__, "occurred.")
+        else:
+            if np_img.shape[2] == 4:
+                np_img = np_img[:, :, :3]
+            detected = detector(np_img, 1)
+            img_h, img_w, _ = np.shape(np_img)
+            original_images_detected.append(np_img)
 
-        if len(detected) != 1:
-            bad_crop_count += 1
-            continue
+            if len(detected) != 1:
+                bad_crop_count += 1
+                continue
 
-        d = detected[0]
-        x1, y1, x2, y2, w, h = d.left(), d.top(), d.right() + \
-            1, d.bottom() + 1, d.width(), d.height()
-        xw1 = int(x1 - cfg.margin * w)
-        yw1 = int(y1 - cfg.margin * h)
-        xw2 = int(x2 + cfg.margin * w)
-        yw2 = int(y2 + cfg.margin * h)
-        cropped_img = crop_image(np_img, xw1, yw1, xw2, yw2)
-        cropped_path_for_file = join(cfg.cropped_data_path, images_name)
-        cv2.imwrite(cropped_path_for_file, cropped_img)
+            d = detected[0]
+            x1, y1, x2, y2, w, h = d.left(), d.top(), d.right() + \
+                1, d.bottom() + 1, d.width(), d.height()
+            # xw1 = int(x1 - cfg.margin * w)
+            # yw1 = int(y1 - cfg.margin * h)
+            # xw2 = int(x2 + cfg.margin * w)
+            # yw2 = int(y2 + cfg.margin * h)
+            # cropped_img = crop_image(np_img, xw1, yw1, xw2, yw2)
+            cropped_img = crop_image(np_img, x1, y1, x2, y2)
+            cropped_path_for_file = join(cfg.cropped_data_path, images_name)
+            cv2.imwrite(cropped_path_for_file, cropped_img)
 
-        good_cropped_img_file_names.append(
-            join(cfg.cropped_data_path, images_name))
+            good_cropped_img_file_names.append(
+                join(cfg.cropped_data_path, images_name))
 
     # save info of good cropped images
     with open(join(cfg.intermediate_data_path, 'combined_annotation.csv'), 'r') as f:

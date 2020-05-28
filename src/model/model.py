@@ -8,9 +8,11 @@ import os
 from os.path import join
 
 os.environ['TORCH_HOME'] = cfg.pretrained_model_path
+device = torch.device(
+    "cuda") if torch.cuda.is_available() else torch.device('cpu')
 
 
-def get_model(is_continue=False, target=None):
+def get_model(target, type, is_continue):
     resnet50 = models.resnet50(pretrained=True)
     for param in resnet50.parameters():
         param.requires_grad = False
@@ -20,9 +22,9 @@ def get_model(is_continue=False, target=None):
     resnet50.fc = fc
 
     if is_continue:
-        file_name = target + '_best_model.pt'
+        file_name = target + '_' + type + '_best_model.pt'
         file_address = join(cfg.trained_model_path, file_name)
-        resnet50.load_state_dict(torch.load(file_address))
+        resnet50.load_state_dict(torch.load(file_address, map_location=device))
         print("Getting model for continue training!")
         return resnet50
 
