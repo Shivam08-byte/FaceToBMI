@@ -4,6 +4,7 @@ from config import cfg
 from torch import nn, optim
 import matplotlib.pyplot as plt
 from os.path import join
+from loss import MAELoss
 
 is_cuda = torch.cuda.is_available()
 

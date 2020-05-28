@@ -7,16 +7,16 @@ import torch
 
 
 def statistical_plot(data=[], target="bmi"):
-    t = list(range(1, cfg.num_of_tries+1))
+    t = list(range(1, len(data)+1))
     df = pd.DataFrame(list(zip(t, data)),
-                      columns=['Try-th', 'Test loss'])
+                      columns=['Sample-th', 'Test loss'])
     df['Test loss'].describe()
     print(df['Test loss'].describe())
     print("Export statistical graph.")
 
     plt.figure(figsize=(10, 10))
     sns.set_color_codes("pastel")
-    ax = sns.distplot(df['Test loss'], bins=int(cfg.num_of_tries/2))
+    ax = sns.distplot(df['Test loss'], bins=int(len(data)/2))
     fig = ax.get_figure()
     file_name = target + "_test_distribution.png"
     file_address = join(cfg.visualization_path, file_name)
