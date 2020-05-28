@@ -92,7 +92,7 @@ def train_val_test_split(type="west"):
     elif type == "asia":
         dataset_name = "Full asian data!"
         dataset = FaceToBMIDataset(
-            csv_file=cfg.asia_data_annotation_file, image_dir=cfg.asian_data_path)
+            csv_file=cfg.asia_annotation_file, image_dir=cfg.asia_image_path)
 
     if type == "test":
         split = DataSplit(dataset=dataset, test_train_split=0)

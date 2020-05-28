@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 from os.path import join
 from loss import MAELoss
 
-is_cuda = torch.cuda.is_available()
+device = torch.device(
+    "cuda") if torch.cuda.is_available() else torch.device('cpu')
 
 
 def get_criterion():
@@ -27,12 +28,11 @@ def get_test_criterion():
     return test_criterion
 
 
-def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=cfg.epochs, target="bmi", type="west"):
+def train_model(train_loader, valid_loader, model, epochs, target, type):
     criterion = get_criterion()
 
-    if train_on_gpu:
-        model = model.cuda()
-        criterion = criterion.cuda()
+    model = model.to(device)
+    criterion = criterion.to(device)
 
     valid_loss_min = np.Inf
     train_losses, valid_losses = [], []
@@ -46,22 +46,15 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
         ###################
         model.train()
         for images, height, weight, bmi in train_loader:
-            if train_on_gpu:
-                images = images.cuda()
+            images, bmi, height, weight = images.to(device), bmi.to(
+                device), height.to(device), weight.to(device)
             optimizer.zero_grad()
             predictions = model(images)
-
             if target == "bmi":
-                if train_on_gpu:
-                    bmi = bmi.cuda()
                 loss = criterion(predictions, bmi)
             elif target == "height":
-                if train_on_gpu:
-                    height = height.cuda()
                 loss = criterion(predictions, height)
             elif target == "weight":
-                if train_on_gpu:
-                    weight = weight.cuda()
                 loss = criterion(predictions, weight)
             else:
                 print("Unknown target")
@@ -76,25 +69,18 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
             with torch.no_grad():
                 model.eval()
                 for images, height, weight, bmi in valid_loader:
-                    if train_on_gpu:
-                        images = images.cuda()
+                    images, bmi, height, weight = images.to(device), bmi.to(
+                        device), height.to(device), weight.to(device)
                     predictions = model(images)
                     if target == "bmi":
-                        if train_on_gpu:
-                            bmi = bmi.cuda()
                         loss = criterion(predictions, bmi)
                     elif target == "height":
-                        if train_on_gpu:
-                            height = height.cuda()
                         loss = criterion(predictions, height)
                     elif target == "weight":
-                        if train_on_gpu:
-                            weight = weight.cuda()
                         loss = criterion(predictions, weight)
                     else:
                         print("Unknown target")
                         return
-
                     valid_loss += loss.item()*images.size(0)
 
             train_loss = train_loss/len(train_loader.sampler)
@@ -119,16 +105,13 @@ def train_model(train_loader, valid_loader, model, train_on_gpu=is_cuda, epochs=
     plt.close(fig)
 
 
-def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, target="bmi", type="west"):
-    device = torch.device("cuda") if is_cuda else torch.device('cpu')
+def test_model(test_loader, model, target, type, plot_sample=True):
     file_name = target + '_' + type + '_best_model.pt'
     file_address = join(cfg.trained_model_path, file_name)
     model.load_state_dict(torch.load(file_address, map_location=device))
     test_criterion = get_test_criterion()
-
-    if train_on_gpu:
-        test_criterion = test_criterion.cuda()
-        model = model.cuda()
+    test_criterion = test_criterion.to(device)
+    model = model.to(device)
 
     test_loss = 0.0
 
@@ -136,20 +119,15 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
     with torch.no_grad():
         model.eval()
         for images, height, weight, bmi in test_loader:
-            if train_on_gpu:
-                images = images.cuda()
+            images, bmi, height, weight = images.to(device), bmi.to(
+                device), height.to(device), weight.to(device)
+
             predictions = model(images)
             if target == "bmi":
-                if train_on_gpu:
-                    bmi = bmi.cuda()
                 loss = test_criterion(predictions, bmi)
             elif target == "height":
-                if train_on_gpu:
-                    height = height.cuda()
                 loss = test_criterion(predictions, height)
             elif target == "weight":
-                if train_on_gpu:
-                    weight = weight.cuda()
                 loss = test_criterion(predictions, weight)
             else:
                 print("Unknown target")
@@ -163,10 +141,7 @@ def test_model(test_loader, model, plot_sample=True, train_on_gpu=is_cuda, targe
     if plot_sample:
         print("\tExport sampling images\n")
         images, height, weight, bmi = next(iter(test_loader))
-        if train_on_gpu:
-            predictions = model(images.cuda())
-        else:
-            predictions = model(images)
+        predictions = model(images.to(device))
         images = images.numpy()
         fig = plt.figure(figsize=(20, cfg.batch_size))
         for idx in np.arange(cfg.batch_size):

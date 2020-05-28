@@ -9,6 +9,7 @@ class Config:
     data_path = join(root, "data")
     src_path = join(root, "src")
     raw_data_path = join(data_path, "raw")
+    output_path = join(root, "output")
 
     intermediate_data_path = join(data_path, "interim")
     full_annotation_file = join(intermediate_data_path, "full_annotation.csv")
@@ -26,6 +27,10 @@ class Config:
     raw_test_data_path = join(intermediate_data_path, "images")
     cropped_data_path = join(test_data_path, "images")
     test_data_annotation_file = join(test_data_path, "annotation.csv")
+
+    asia_data_path = join(data_path, "asia")
+    asia_image_path = join(asia_data_path, "images")
+    asia_annotation_file = join(asia_data_path, "annotation.csv")
 
     visualization_path = join(src_path, "visualization")
 
