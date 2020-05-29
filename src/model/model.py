@@ -23,6 +23,7 @@ def get_model(target, type, is_continue):
 
     if is_continue:
         file_name = target + '_' + type + '_best_model.pt'
+        print(f"Loading {file_name}")
         file_address = join(cfg.trained_model_path, file_name)
         resnet50.load_state_dict(torch.load(file_address, map_location=device))
         print("Getting model for continue training!")
